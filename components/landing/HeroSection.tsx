@@ -280,7 +280,7 @@ export function HeroSection() {
           className="text-[15px] font-light text-[#888888] leading-[1.7] max-w-[460px] mb-10"
           style={{ animation: 'fup 0.55s ease 0.26s both' }}
         >
-          Skip <strong className="text-[#e8e8e8] font-normal">40–80 hours</strong> of architecture work. Deploy a billable AI product in one day — auth, agents, RAG, billing, credit guards, all wired together and ready to ship.
+          Skip <strong className="text-[#e8e8e8] font-normal">40–80 hours</strong> of architecture work. Deploy an AI product in one day — auth, agents, RAG, credit guards, all wired together and ready to ship.
         </p>
 
         {/* Stack line */}
@@ -288,7 +288,7 @@ export function HeroSection() {
           className="font-mono text-[11px] text-[#4a4a4a] tracking-[0.03em] mb-9 -mt-7"
           style={{ animation: 'fup 0.55s ease 0.30s both' }}
         >
-          <strong className="text-[#888888] font-normal">Next.js 16 · AI SDK 6 · Supabase · Auth.js v5 · Lemon Squeezy · pgvector</strong>
+          <strong className="text-[#888888] font-normal">Next.js 16 · AI SDK 6 · Supabase · Auth.js v5 · pgvector</strong>
         </p>
 
         {/* CTAs */}

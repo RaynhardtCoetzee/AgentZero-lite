@@ -7,7 +7,6 @@ import {
   Bot,
   Play,
   BookOpen,
-  CreditCard,
   Settings,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -81,7 +80,6 @@ export function Sidebar({ orgName, userEmail, creditsRemaining, agentCount }: Si
           <p className="px-3 pb-1 text-[10px] font-medium uppercase tracking-widest text-sidebar-foreground/25">
             Account
           </p>
-          <NavItem href="/dashboard/billing"  icon={CreditCard}   label="Billing"   active={isActive("/dashboard/billing")} />
           <NavItem href="/dashboard/settings" icon={Settings}     label="Settings"  active={isActive("/dashboard/settings")} />
         </div>
 

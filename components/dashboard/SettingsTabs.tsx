@@ -3,7 +3,7 @@
 /**
  * components/dashboard/SettingsTabs.tsx
  *
- * Settings page tab panels: Account · Organisation · API Keys · Billing
+ * Settings page tab panels: Account · Organisation · API Keys
  * Props are server-fetched session and org data passed down from the page.
  */
 
@@ -12,7 +12,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
 import { Badge } from "@/components/ui/badge";
-import { KeyRound, CreditCard, Building2, User } from "lucide-react";
+import { KeyRound, Building2, User } from "lucide-react";
 
 type SettingsTabsProps = {
   userName:    string;
@@ -20,7 +20,6 @@ type SettingsTabsProps = {
   orgName:     string;
   orgSlug:     string;
   defaultTab?: string;
-  billingSlot: React.ReactNode;
 };
 
 // ─── Read-only field ──────────────────────────────────────────────────────────
@@ -50,7 +49,7 @@ function ReadOnlyField({ id, label, value, placeholder }: {
 
 // ─── Tabs ─────────────────────────────────────────────────────────────────────
 
-export function SettingsTabs({ userName, userEmail, orgName, orgSlug, defaultTab = "account", billingSlot }: SettingsTabsProps) {
+export function SettingsTabs({ userName, userEmail, orgName, orgSlug, defaultTab = "account" }: SettingsTabsProps) {
   return (
     <Tabs defaultValue={defaultTab}>
       <TabsList className="border border-border bg-card h-8 p-0.5">
@@ -62,9 +61,6 @@ export function SettingsTabs({ userName, userEmail, orgName, orgSlug, defaultTab
         </TabsTrigger>
         <TabsTrigger value="apikeys"  className="text-xs h-7 px-3 gap-1.5">
           <KeyRound className="h-3 w-3" /> API Keys
-        </TabsTrigger>
-        <TabsTrigger value="billing"  className="text-xs h-7 px-3 gap-1.5">
-          <CreditCard className="h-3 w-3" /> Billing
         </TabsTrigger>
       </TabsList>
 
@@ -137,14 +133,6 @@ export function SettingsTabs({ userName, userEmail, orgName, orgSlug, defaultTab
         </div>
       </TabsContent>
 
-      {/* ── Billing ── */}
-      <TabsContent value="billing" className="mt-4">
-        <div className="rounded-lg border border-border bg-card p-4 space-y-4">
-          <h3 className="text-sm font-medium text-foreground">Billing</h3>
-          <Separator />
-          {billingSlot}
-        </div>
-      </TabsContent>
     </Tabs>
   );
 }

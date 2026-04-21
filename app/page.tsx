@@ -6,7 +6,7 @@ import { WaitlistForm }    from '@/components/landing/WaitlistForm'
 /* ── Marquee ────────────────────────────────────────────── */
 const MARQUEE_ITEMS = [
   'Next.js 16','AI SDK 6','Supabase','Auth.js v5','pgvector',
-  'Lemon Squeezy','TypeScript','Zod','Vercel','ReAct Loop','RAG Pipeline','Multi-tenant',
+  'TypeScript','Zod','Vercel','ReAct Loop','RAG Pipeline','Multi-tenant',
 ]
 
 function MarqueeStrip() {
@@ -84,12 +84,6 @@ const STACK_CARDS = [
     icon: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>,
   },
   {
-    title: 'Billing Infrastructure',
-    body: 'Lemon Squeezy handles billing as Merchant of Record — VAT compliance across 50+ countries handled for you. Credit top-ups, payment history, invoice download, webhook handling, all wired.',
-    tech: 'Lemon Squeezy · Webhooks · Supabase ledger',
-    icon: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>,
-  },
-  {
     title: 'Type-safe Codebase',
     body: 'End-to-end TypeScript. Zod validation on all agent I/O. Database schemas fully typed via Supabase codegen. Refactor with confidence from day one.',
     tech: 'TypeScript · Zod · Supabase codegen',
@@ -109,7 +103,7 @@ function StackSection() {
           Six domains. Pre-assembled.
         </h2>
         <p className="text-[15px] font-light text-[#888888] leading-[1.7] max-w-[520px]">
-          Auth, multi-tenancy, agent orchestration, vector memory, credit guards, billing — integrated and tested, not bolted together the night before launch.
+          Auth, multi-tenancy, agent orchestration, vector memory, and credit guards — integrated and tested, not bolted together the night before launch.
         </p>
 
         <div className="mt-[52px] grid grid-cols-1 md:grid-cols-3 bg-[rgba(255,255,255,0.07)] border border-[rgba(255,255,255,0.07)] rounded-[10px] overflow-hidden gap-px">
@@ -140,7 +134,7 @@ const LOG_ENTRIES = [
   { time: '2 AM',  loc: 'Pretoria', text: <>bartending funds the build. just pushed <em className="not-italic font-mono text-[12px] text-[#e8e8e8]">auth.js v5 multi-tenant config</em>. running clean on Vercel.</> },
   { time: '9 PM',  loc: '—',        text: <>RAG pipeline is streaming via vector chunks. <em className="not-italic font-mono text-[12px] text-[#e8e8e8]">it works.</em></> },
   { time: '11 PM', loc: 'Pretoria', text: <><em className="not-italic font-mono text-[12px] text-[#e8e8e8]">credit guard</em> deployed. pre-run balance check + per-run deduction in a single DB transaction. no race conditions.</> },
-  { time: '3 AM',  loc: '—',        text: <>lemon squeezy webhooks wired. top-up flow end-to-end working. bought a coffee with the first test payment.</> },
+  { time: '3 AM',  loc: '—',        text: <>usage tracking shipped end-to-end. telemetry, credit flow, and run logs now line up cleanly.</> },
   { time: '6 PM',  loc: 'Pretoria', text: <>deployed to <em className="not-italic font-mono text-[12px] text-[#e8e8e8]">Vercel</em>. cold start under 200ms. <em className="not-italic font-mono text-[12px] text-[#e8e8e8]">shipping this.</em></> },
 ]
 
@@ -187,7 +181,7 @@ const FOUNDING_FEATURES = [
   'Complete Next.js 16 + AI SDK 6 codebase',
   'Auth.js v5 multi-tenant architecture',
   'RAG pipeline with pgvector',
-  'Lemon Squeezy billing + credit guard system',
+  'Credit guard system with usage tracking',
   'Streaming ReAct agent loop',
   'Type-safe end-to-end with Zod',
   'Deploy to Vercel in one command',

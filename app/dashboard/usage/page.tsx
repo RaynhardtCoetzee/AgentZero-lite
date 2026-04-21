@@ -121,10 +121,10 @@ export default function UsagePage() {
           <h1 className="font-mono font-black uppercase tracking-tight text-foreground">Usage</h1>
         </div>
         <Link
-          href="/dashboard/billing"
+          href="/dashboard/settings"
           className="rounded-sm border border-border px-3 py-1.5 font-mono text-xs text-muted-foreground/60 hover:text-foreground hover:border-border/70 transition-colors"
         >
-          Top up credits
+          Account settings
         </Link>
       </div>
 

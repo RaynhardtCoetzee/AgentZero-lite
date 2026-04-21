@@ -4,9 +4,9 @@ import { useState } from 'react'
 
 const NODES: Record<string, { path: string; title: string; body: string; tags: string[] }> = {
   app:       { path: '/app',               title: 'App Root',            body: 'Next.js 16 App Router. All routes, layouts, and server components live here. Structured for clarity — not cleverness. Every file is where you expect it.',                                                                              tags: ['Next.js 16', 'App Router', 'Server Components', 'TypeScript'] },
-  dashboard: { path: '/app/dashboard',     title: 'Dashboard',           body: 'The authenticated shell. Agents, billing, knowledge base, usage, and settings — each a self-contained route with its own layout. PPR-ready: the shell renders in <100ms, dynamic feeds load behind Suspense boundaries.',              tags: ['App Router', 'PPR', 'Suspense', 'Auth.js v5'] },
-  api:       { path: '/app/api',           title: 'API Routes',          body: 'Server-side route handlers for webhooks and external integrations. Lemon Squeezy billing events land here. Credit guard runs before any inference — if the balance is zero, the request never reaches the model.',                    tags: ['Route Handlers', 'Webhooks', 'Lemon Squeezy', 'Credit Guard'] },
-  lib:       { path: '/lib',              title: 'Shared Library',      body: 'Utility functions, type definitions, and shared logic. Supabase client initialisation, auth helpers, billing utilities, and Zod schemas for all agent I/O. The shared contract everything else builds on.',                            tags: ['TypeScript', 'Zod', 'Supabase Client', 'Auth.js'] },
+  dashboard: { path: '/app/dashboard',     title: 'Dashboard',           body: 'The authenticated shell. Agents, knowledge base, usage, and settings — each a self-contained route with its own layout. PPR-ready: the shell renders in <100ms, dynamic feeds load behind Suspense boundaries.',                       tags: ['App Router', 'PPR', 'Suspense', 'Auth.js v5'] },
+  api:       { path: '/app/api',           title: 'API Routes',          body: 'Server-side route handlers for app integrations and workflow orchestration. Credit guard runs before any inference — if the balance is zero, the request never reaches the model.',                                                  tags: ['Route Handlers', 'Server Actions', 'Credit Guard'] },
+  lib:       { path: '/lib',              title: 'Shared Library',      body: 'Utility functions, type definitions, and shared logic. Supabase client initialisation, auth helpers, and Zod schemas for all agent I/O. The shared contract everything else builds on.',                                             tags: ['TypeScript', 'Zod', 'Supabase Client', 'Auth.js'] },
   ai:        { path: '/lib/ai',           title: 'RAG Pipeline',        body: 'Vector embedding pipeline built on AI SDK 6 with pgvector in Supabase. Chunk → embed → store → retrieve. Fully typed. Drop in your documents and the agent has long-term memory from day one. Streaming retrieval, no boilerplate.',  tags: ['AI SDK 6', 'pgvector', 'Supabase', 'Streaming'] },
   credits:   { path: '/lib/credits',      title: 'Credit Guard System', body: 'Middleware-level credit enforcement. Pre-run balance check, atomic deduction, usage log write — all in a single transaction. Runs block at zero. No race conditions, no partial charges, no surprises.',                              tags: ['Supabase', 'Transactions', 'Usage Logging', 'Server Actions'] },
   supabase:  { path: '/supabase',         title: 'Database & Multi-tenancy', body: "Row-level security policies, migration files, and typed schema via codegen. Every table has organisation-scoped RLS. Tenants cannot see each other's data — enforced at the database level, not the application layer.",          tags: ['Supabase', 'RLS', 'pgvector', 'Migrations'] },
@@ -14,11 +14,11 @@ const NODES: Record<string, { path: string; title: string; body: string; tags: s
 
 const TREE: Array<{ id: string; label: string; prefix: string; isDir?: boolean; desc?: string }> = [
   { id: 'app',       label: 'app',       prefix: '/',        isDir: true },
-  { id: 'dashboard', label: 'dashboard', prefix: '── /',     isDir: true, desc: 'agents · billing · settings' },
+  { id: 'dashboard', label: 'dashboard', prefix: '── /',     isDir: true, desc: 'agents · usage · settings' },
   { id: 'api',       label: 'api',       prefix: '── /' },
   { id: 'lib',       label: 'lib',       prefix: '── /',     isDir: true },
   { id: 'ai',        label: 'ai',        prefix: '│  ── /',  desc: 'RAG · AI SDK 6' },
-  { id: 'credits',   label: 'credits',   prefix: '│  ── /',  desc: 'credit guard · billing' },
+  { id: 'credits',   label: 'credits',   prefix: '│  ── /',  desc: 'credit guard' },
   { id: 'supabase',  label: 'supabase',  prefix: '── /',     desc: 'database · multi-tenancy' },
 ]
 

@@ -2,13 +2,12 @@ import type { Metadata } from "next";
 import { auth } from "@/auth";
 import { adminClient } from "@/lib/supabase/admin";
 import { SettingsTabs } from "@/components/dashboard/SettingsTabs";
-import { BillingPanel } from "@/components/dashboard/BillingPanel";
 
 export const metadata: Metadata = {
   title: "Settings — AgentZero",
 };
 
-const VALID_TABS = ["account", "org", "apikeys", "billing"] as const;
+const VALID_TABS = ["account", "org", "apikeys"] as const;
 type Tab = (typeof VALID_TABS)[number];
 
 export default async function SettingsPage({
@@ -54,7 +53,6 @@ export default async function SettingsPage({
         orgName={orgName}
         orgSlug={orgSlug}
         defaultTab={defaultTab}
-        billingSlot={<BillingPanel />}
       />
     </div>
   );

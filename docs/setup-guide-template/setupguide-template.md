@@ -13,7 +13,6 @@
 - [cite_start]**SUPABASE_SECRET_KEY**: Admin access (Node-only). [cite: 178]
 - [cite_start]**AUTH_SECRET**: Generate via `npx auth secret`. [cite: 29]
 - [cite_start]**OPENAI_API_KEY**: Primary Agent Brain. [cite: 48]
-- [cite_start]**LEMON_SQUEEZY_API_KEY**: Merchant of Record billing. [cite: 78]
 
 ## 3. Database Initialization (Supabase)
 1. [cite_start]Create a project at [supabase.com](https://supabase.com). [cite: 25]

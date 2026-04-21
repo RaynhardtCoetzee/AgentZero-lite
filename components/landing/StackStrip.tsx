@@ -6,7 +6,6 @@ const STACK = [
   'Supabase',
   'Auth.js v5',
   'pgvector',
-  'Lemon Squeezy',
   'TypeScript',
   'Zod 4',
 ]
