@@ -21,7 +21,9 @@ import { headers } from "next/headers";
 import { redirect } from "next/navigation";
 import { AuthError } from "next-auth";
 import { z } from "zod";
+import argon2 from "argon2";
 import { signIn, signOut } from "@/auth";
+import { adminClient } from "@/lib/supabase/admin";
 import { getUserByEmail } from "@/lib/supabase/queries";
 
 // ─── Shared return type ───────────────────────────────────────────────────────
@@ -42,6 +44,27 @@ const loginSchema = z.object({
     .string()
     .min(8)
     .describe("Raw password — verified against the argon2 hash inside authorize()"),
+});
+
+// ─── Registration schema (Zod 4) ──────────────────────────────────────────────
+
+const registerSchema = z.object({
+  name: z
+    .string()
+    .min(2)
+    .describe("User's display name"),
+  orgName: z
+    .string()
+    .min(2)
+    .describe("Organisation name — slug is derived from this"),
+  email: z
+    .string()
+    .email()
+    .describe("Unique login email"),
+  password: z
+    .string()
+    .min(8)
+    .describe("Plaintext password — argon2-hashed before storage"),
 });
 
 // ─── loginAction ──────────────────────────────────────────────────────────────
@@ -112,4 +135,126 @@ export async function loginAction(
 export async function logoutAction(): Promise<void> {
   await signOut({ redirect: false });
   redirect("/");
+}
+
+// ─── registerAction ───────────────────────────────────────────────────────────
+
+/**
+ * Server Action for user registration.
+ * Creates organisation + user atomically (with orphan cleanup on user insert failure).
+ */
+export async function registerAction(
+  _prevState: ActionResult | null,
+  formData: FormData
+): Promise<ActionResult> {
+  // 1. Validate input — throw on malformed data.
+  const parsed = registerSchema.safeParse({
+    name: formData.get("name"),
+    orgName: formData.get("orgName"),
+    email: formData.get("email"),
+    password: formData.get("password"),
+  });
+
+  if (!parsed.success) {
+    return { success: false, error: `Invalid input: ${parsed.error.message}` };
+  }
+
+  const { name, orgName, email, password } = parsed.data;
+
+  // 2. Pre-flight: check email uniqueness.
+  const user = await getUserByEmail(email);
+  if (user) {
+    return { success: false, error: "Email already registered. Please sign in." };
+  }
+
+  // 3. Derive slug from orgName.
+  let slug = orgName
+    .toLowerCase()
+    .replace(/\s+/g, "-")
+    .replace(/[^a-z0-9-]/g, "");
+
+  if (!slug) slug = "org";
+
+  // 4. Create organisation.
+  let orgId: string | undefined;
+  let orgCreateError = false;
+
+  // First attempt: slug as-is
+  {
+    const { data, error } = await adminClient
+      .from("organisations")
+      .insert({ name: orgName, slug })
+      .select("id")
+      .single();
+
+    if (error) {
+      // Slug collision — retry with 4-char random suffix
+      if (error.code === "23505") {
+        const suffix = Math.random().toString(36).substring(2, 6);
+        const { data: retryData, error: retryError } = await adminClient
+          .from("organisations")
+          .insert({ name: orgName, slug: `${slug}-${suffix}` })
+          .select("id")
+          .single();
+
+        if (retryError || !retryData) {
+          orgCreateError = true;
+        } else {
+          orgId = retryData.id;
+        }
+      } else {
+        orgCreateError = true;
+      }
+    } else if (data) {
+      orgId = data.id;
+    }
+  }
+
+  if (orgCreateError || !orgId) {
+    return { success: false, error: "Failed to create organisation. Please try again." };
+  }
+
+  // 5. Hash password.
+  const passwordHash = await argon2.hash(password);
+
+  // 6. Create user.
+  const { data: userData, error: userError } = await adminClient
+    .from("users")
+    .insert({
+      email,
+      name,
+      organisation_id: orgId,
+      password_hash: passwordHash,
+    })
+    .select("id")
+    .single();
+
+  if (userError || !userData) {
+    // Cleanup: delete the orphaned organisation.
+    await adminClient.from("organisations").delete().eq("id", orgId);
+    return { success: false, error: "Failed to create account. Please try again." };
+  }
+
+  // 7. Sign in immediately — signIn will redirect on success or throw on failure.
+  // In next-auth v5, use redirectTo instead of redirect: false.
+  try {
+    await signIn("credentials", {
+      email,
+      password,
+      redirectTo: "/dashboard",
+    });
+  } catch (error) {
+    // NEXT_REDIRECT exceptions should bubble up and end the flow.
+    // Other errors mean auth failed.
+    if (error instanceof Error && error.message.includes("NEXT_REDIRECT")) {
+      throw error;
+    }
+    if (error instanceof AuthError) {
+      return { success: false, error: "Account created, but sign-in failed. Please try again." };
+    }
+    throw error;
+  }
+
+  // If signIn didn't redirect (shouldn't happen), do it explicitly.
+  redirect("/dashboard");
 }

@@ -1,10 +1,14 @@
+// AgentZero Lite — billing layer removed
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { auth } from "@/auth";
 import { adminClient } from "@/lib/supabase/admin";
-import { RunPanel } from "@/components/dashboard/RunPanel";
+import { AgentChat } from "@/components/dashboard/AgentChat";
+import { AgentConfigPanel } from "@/components/dashboard/AgentConfigPanel";
+import { AgentDetailClient } from "./_components/AgentDetailClient";
 import { ChevronRight } from "lucide-react";
+import { getDefaultModelId } from "@/lib/ai/model-registry";
 
 type Props = { params: Promise<{ agentId: string }> };
 
@@ -18,7 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     .eq("organisation_id", session?.user?.orgId ?? "")
     .single();
   const name = (data?.name as string) ?? "Agent";
-  return { title: `Run ${name} — AgentZero` };
+  return { title: `${name} — AgentZero` };
 }
 
 export default async function AgentPage({ params }: Props) {
@@ -36,26 +40,29 @@ export default async function AgentPage({ params }: Props) {
   if (!agent) notFound();
 
   const agentName         = agent.name as string;
-  const agentInstructions = (agent.instructions as string | null) ?? "";
+  const agentInstructions = (agent.instructions as string | null);
+  const defaultModelId    = getDefaultModelId();
 
   return (
-    <div className="flex h-full flex-col gap-4">
+    <div className="flex h-full flex-col">
 
-      {/* Breadcrumb */}
-      <div className="flex shrink-0 items-center gap-1.5">
-        <Link
-          href="/dashboard/agents"
-          className="font-mono text-xs text-muted-foreground/50 hover:text-muted-foreground transition-colors"
-        >
-          Run agent
-        </Link>
-        <ChevronRight className="h-3 w-3 shrink-0 text-muted-foreground/30" />
-        <span className="font-mono text-xs text-foreground/70">{agentName}</span>
-      </div>
+      {/* Split layout: chats/chat on left, config on right (vertical stack on mobile) */}
+      <div className="flex flex-col lg:flex-row flex-1 min-h-0 gap-0 lg:gap-3">
 
-      {/* Run panel — fills remaining space */}
-      <div className="flex-1 min-h-0">
-        <RunPanel agentId={agentId} agentName={agentName} initialInstructions={agentInstructions} />
+        {/* Chat panel — fills remaining space, left on desktop */}
+        <div className="flex-1 min-h-0">
+          <AgentDetailClient agentId={agentId} agentName={agentName} initialPrompt={agentInstructions} defaultModelId={defaultModelId} />
+        </div>
+
+        {/* Config panel — right side, hidden on mobile */}
+        <div className="hidden lg:flex w-64 shrink-0 rounded-sm border border-border bg-card overflow-hidden">
+          <AgentConfigPanel
+            agentId={agentId}
+            initialName={agentName}
+            initialPrompt={agentInstructions}
+          />
+        </div>
+
       </div>
 
     </div>

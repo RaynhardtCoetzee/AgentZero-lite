@@ -1,0 +1,23 @@
+{
+  "folder": "services",
+  "folderPath": "C:/Users/owner/OneDrive/Desktop/01agentzero/services",
+  "nodes": [
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/services",
+      "name": "services",
+      "type": "folder",
+      "parent": null,
+      "depth": 1
+    },
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/services/document_processor",
+      "name": "document_processor",
+      "type": "folder",
+      "parent": "C:/Users/owner/OneDrive/Desktop/01agentzero/services",
+      "depth": 2
+    }
+  ],
+  "internalLinks": [],
+  "externalIngress": [],
+  "externalEgress": []
+}

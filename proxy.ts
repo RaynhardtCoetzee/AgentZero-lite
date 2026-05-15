@@ -36,14 +36,20 @@ export function createProxyHandler(options: ProxyOptions = {}) {
    * Note: Uses NextRequest/NextResponse for Web-standard compatibility. [cite: 48]
    */
   return async function proxy(req: NextRequest) {
+    // Skip auth check for public manifest/docs APIs
+    const pathname = req.nextUrl.pathname;
+    if (pathname.startsWith('/api/manifest') || pathname.startsWith('/api/system-docs')) {
+      return NextResponse.next();
+    }
+
     // Fallback to 'referer' if 'origin' is absent (standard local browser behavior)
     const origin = req.headers.get("origin") || req.headers.get("referer") || "";
     const normalizedOrigin = origin.replace(/\/$/, "");
 
-    // 1️⃣ MULTI-TENANT ORIGIN GUARD 
-    // Prevents unauthorized domains from draining your AI credit balance. 
+    // 1️⃣ MULTI-TENANT ORIGIN GUARD
+    // Prevents unauthorized domains from draining your AI credit balance.
     if (allowedOrigins.length > 0) {
-      const isAllowed = allowedOrigins.some(allowed => 
+      const isAllowed = allowedOrigins.some(allowed =>
         normalizedOrigin.startsWith(allowed.replace(/\/$/, ""))
       );
 

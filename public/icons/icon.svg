@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" fill="#0a0a0a"/>
+  <rect x="24" y="24" width="464" height="464" rx="80" fill="#111111"/>
+  <!-- Grid dots -->
+  <circle cx="160" cy="160" r="8" fill="#c8f135" opacity="0.9"/>
+  <circle cx="256" cy="160" r="8" fill="#c8f135" opacity="0.5"/>
+  <circle cx="352" cy="160" r="8" fill="#c8f135" opacity="0.3"/>
+  <circle cx="160" cy="256" r="8" fill="#c8f135" opacity="0.5"/>
+  <circle cx="256" cy="256" r="12" fill="#c8f135"/>
+  <circle cx="352" cy="256" r="8" fill="#c8f135" opacity="0.5"/>
+  <circle cx="160" cy="352" r="8" fill="#c8f135" opacity="0.3"/>
+  <circle cx="256" cy="352" r="8" fill="#c8f135" opacity="0.5"/>
+  <circle cx="352" cy="352" r="8" fill="#c8f135" opacity="0.9"/>
+  <!-- Connecting lines -->
+  <line x1="160" y1="160" x2="352" y2="352" stroke="#c8f135" stroke-width="2" opacity="0.2"/>
+  <line x1="256" y1="160" x2="256" y2="352" stroke="#c8f135" stroke-width="2" opacity="0.15"/>
+  <line x1="160" y1="256" x2="352" y2="256" stroke="#c8f135" stroke-width="2" opacity="0.15"/>
+</svg>

@@ -28,7 +28,7 @@ import { extractText } from "unpdf";
 // ---------------------------------------------------------------------------
 
 const MAX_FILE_BYTES = 10 * 1024 * 1024; // 10 MB
-const ALLOWED_TYPES  = ["application/pdf", "text/plain"] as const;
+const ALLOWED_TYPES  = ["application/pdf", "text/plain", "text/markdown"] as const;
 const CHUNK_SIZE     = 500; // characters per chunk
 const CHUNK_OVERLAP  = 50;  // characters of overlap between adjacent chunks
 
@@ -39,7 +39,7 @@ const CHUNK_OVERLAP  = 50;  // characters of overlap between adjacent chunks
 const fileSchema = z
   .instanceof(File)
   .describe(
-    "The uploaded file. Must be a non-empty PDF or plain-text file under 10 MB."
+    "The uploaded file. Must be a non-empty PDF, TXT, or MD file under 10 MB."
   )
   .refine((f) => f.size > 0, {
     message: "File is empty.",
@@ -47,8 +47,13 @@ const fileSchema = z
   .refine((f) => f.size <= MAX_FILE_BYTES, {
     message: "File exceeds the 10 MB size limit.",
   })
-  .refine((f) => (ALLOWED_TYPES as readonly string[]).includes(f.type), {
-    message: `Unsupported file type. Accepted: ${ALLOWED_TYPES.join(", ")}.`,
+  .refine((f) => {
+    const isAllowedType = (ALLOWED_TYPES as readonly string[]).includes(f.type);
+    const isMdFile = f.name.toLowerCase().endsWith('.md');
+    const isTextType = f.type.startsWith('text/');
+    return isAllowedType || isMdFile || isTextType;
+  }, {
+    message: "Unsupported file type. Accepted: PDF, TXT, MD.",
   });
 
 // ---------------------------------------------------------------------------
@@ -58,6 +63,45 @@ const fileSchema = z
 export type UploadDocumentResult =
   | { success: true;  documentId: string; chunkCount: number }
   | { success: false; error: string };
+
+export type ListDocumentsResult =
+  | { ok: true;  documents: Array<{ id: string; file_name: string; file_type: string }> }
+  | { ok: false; error: string };
+
+export async function listOrgDocuments(): Promise<ListDocumentsResult> {
+  const session = await auth();
+  if (!session?.user?.orgId) return { ok: false, error: "Unauthorized." };
+
+  const { data, error } = await adminClient
+    .from("documents")
+    .select("id, file_name, file_type")
+    .eq("org_id", session.user.orgId)
+    .order("created_at", { ascending: false });
+
+  if (error) return { ok: false, error: error.message };
+  return { ok: true, documents: (data ?? []) as Array<{ id: string; file_name: string; file_type: string }> };
+}
+
+export type GetDocumentContentResult =
+  | { ok: true;  content: string }
+  | { ok: false; error: string };
+
+export async function getDocumentContent(documentId: string): Promise<GetDocumentContentResult> {
+  const session = await auth();
+  if (!session?.user?.orgId) return { ok: false, error: "Unauthorized." };
+
+  const { data, error } = await adminClient
+    .from("documents")
+    .select("content")
+    .eq("id", documentId)
+    .eq("org_id", session.user.orgId)
+    .single();
+
+  if (error) return { ok: false, error: error.message };
+  if (!data?.content) return { ok: false, error: "Document has no content." };
+
+  return { ok: true, content: data.content as string };
+}
 
 // ---------------------------------------------------------------------------
 // Server Action
@@ -107,7 +151,7 @@ export async function uploadDocument(
       );
       text = merged;
     } else {
-      // text/plain
+      // text/plain, text/markdown, or other text types
       text = await file.text();
     }
 
@@ -136,6 +180,7 @@ export async function uploadDocument(
         agent_id:  validatedAgentId,
         file_name: file.name,
         file_type: file.type,
+        content:   text,
       })
       .select("id")
       .single();

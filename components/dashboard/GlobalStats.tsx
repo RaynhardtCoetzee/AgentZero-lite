@@ -65,23 +65,26 @@ export async function GlobalStats() {
 
   return (
     <div className={cn(
-      "flex h-12 shrink-0 items-center",
-      "border-b border-border bg-card px-4 overflow-x-auto"
+      "grid grid-cols-2 sm:flex sm:h-14 shrink-0 sm:items-center",
+      "glass-1 rounded-md sm:rounded-none sm:border-x-0 sm:border-t-0 border-b border-white/[0.06]",
+      "sm:px-4 px-3 py-2 sm:py-0 sm:overflow-x-auto gap-y-2 gap-x-0",
     )}>
       {STATS.map(({ label, value, icon: Icon }, i) => (
         <div
           key={label}
           className={cn(
-            "flex items-center gap-2 px-4 shrink-0",
-            i !== 0 && "border-l border-border"
+            "flex items-center gap-2.5 sm:px-4 px-2 py-1 sm:py-0 sm:shrink-0",
+            i !== 0 && "sm:border-l sm:border-white/[0.06]"
           )}
         >
-          <Icon className="h-3 w-3 shrink-0 text-muted-foreground" />
-          <div className="flex flex-col">
-            <span className="text-[10px] leading-none text-muted-foreground whitespace-nowrap">
+          <div className="flex h-7 w-7 items-center justify-center rounded-sm bg-white/[0.04] border border-white/[0.06]">
+            <Icon className="h-3.5 w-3.5 shrink-0 text-primary/80" />
+          </div>
+          <div className="flex flex-col min-w-0">
+            <span className="font-mono text-[8px] uppercase tracking-widest leading-none text-muted-foreground/55 whitespace-nowrap">
               {label}
             </span>
-            <span className="text-xs font-medium tabular-nums text-foreground">
+            <span className="text-sm font-mono font-black tabular-nums text-foreground mt-1 leading-none">
               {value}
             </span>
           </div>

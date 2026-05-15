@@ -1,0 +1,206 @@
+{
+  "folder": "scripts",
+  "folderPath": "C:/Users/owner/OneDrive/Desktop/01agentzero/scripts",
+  "nodes": [
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/scripts",
+      "name": "scripts",
+      "type": "folder",
+      "parent": null,
+      "depth": 1
+    },
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/scripts/dotenv.ts",
+      "name": "dotenv.ts",
+      "type": "source",
+      "parent": "C:/Users/owner/OneDrive/Desktop/01agentzero/scripts",
+      "depth": 2,
+      "filePath": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\scripts\\dotenv.ts",
+      "description": "scripts/dotenv.ts — env loader for ts-node scripts Import this as the FIRST import in any script. TypeScript hoists all imports to the top of compiled output in source order, so this module's side effects (dotenv.config calls) run before any tool module loads. This matters because lib/supabase/admin.ts throws at module initialisation time if NEXT_PUBLIC_SUPABASE_URL is missing. Load order mirrors Next.js: .env first, .env.local overrides.",
+      "complexity": 2,
+      "coupling": 1,
+      "linesOfCode": 17,
+      "exportCount": 1
+    },
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/scripts/generate-lite.ts",
+      "name": "generate-lite.ts",
+      "type": "source",
+      "parent": "C:/Users/owner/OneDrive/Desktop/01agentzero/scripts",
+      "depth": 2,
+      "filePath": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\scripts\\generate-lite.ts",
+      "complexity": 20,
+      "coupling": 0,
+      "linesOfCode": 204,
+      "exportCount": 0
+    },
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/scripts/scan-system.ts",
+      "name": "scan-system.ts",
+      "type": "source",
+      "parent": "C:/Users/owner/OneDrive/Desktop/01agentzero/scripts",
+      "depth": 2,
+      "filePath": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\scripts\\scan-system.ts",
+      "complexity": 52,
+      "coupling": 0,
+      "linesOfCode": 523,
+      "exportCount": 0
+    },
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/scripts/seed.ts",
+      "name": "seed.ts",
+      "type": "source",
+      "parent": "C:/Users/owner/OneDrive/Desktop/01agentzero/scripts",
+      "depth": 2,
+      "filePath": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\scripts\\seed.ts",
+      "description": "scripts/seed.ts — Test User Seed Creates a test organisation and user with an argon2-hashed password. Idempotent: safe to run multiple times (upserts on slug / email). Run:   npx tsx --env-file=.env.local scripts/seed.ts",
+      "complexity": 6,
+      "coupling": 0,
+      "linesOfCode": 61,
+      "exportCount": 0
+    },
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/scripts/test-agent.ts",
+      "name": "test-agent.ts",
+      "type": "source",
+      "parent": "C:/Users/owner/OneDrive/Desktop/01agentzero/scripts",
+      "depth": 2,
+      "filePath": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\scripts\\test-agent.ts",
+      "description": "scripts/test-agent.ts — Temporary Task 34 verification Tests runAgentAction in isolation, outside Next.js. Delete this file once the test passes. Run:   npx tsx --env-file=.env.local scripts/test-agent.ts",
+      "complexity": 72,
+      "coupling": 28,
+      "linesOfCode": 21,
+      "exportCount": 0
+    },
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/scripts/test-tools.ts",
+      "name": "test-tools.ts",
+      "type": "source",
+      "parent": "C:/Users/owner/OneDrive/Desktop/01agentzero/scripts",
+      "depth": 2,
+      "filePath": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\scripts\\test-tools.ts",
+      "description": "MUST be first import — loads .env and .env.local before any tool module",
+      "complexity": 38,
+      "coupling": 9,
+      "linesOfCode": 159,
+      "exportCount": 0
+    }
+  ],
+  "internalLinks": [
+    {
+      "source": "C:/Users/owner/OneDrive/Desktop/01agentzero/scripts/test-tools.ts",
+      "target": "C:/Users/owner/OneDrive/Desktop/01agentzero/scripts/dotenv.ts"
+    }
+  ],
+  "externalIngress": [],
+  "externalEgress": [
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/scripts/test-agent.ts",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\scripts\\test-agent.ts",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/ai/model-registry.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/scripts/test-agent.ts",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\scripts\\test-agent.ts",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/ai/provider-factory.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/scripts/test-agent.ts",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\scripts\\test-agent.ts",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/web-search.ts",
+      "targetFolder": "features"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/scripts/test-agent.ts",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\scripts\\test-agent.ts",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/email-automate.ts",
+      "targetFolder": "features"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/scripts/test-agent.ts",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\scripts\\test-agent.ts",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/supabase/admin.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/scripts/test-agent.ts",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\scripts\\test-agent.ts",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/db-read-write.ts",
+      "targetFolder": "features"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/scripts/test-agent.ts",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\scripts\\test-agent.ts",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/supabase/queries.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/scripts/test-agent.ts",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\scripts\\test-agent.ts",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/ai/embeddings.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/scripts/test-agent.ts",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\scripts\\test-agent.ts",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/actions/agent-crud-actions.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/scripts/test-agent.ts",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\scripts\\test-agent.ts",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/knowledge-search.ts",
+      "targetFolder": "features"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/scripts/test-agent.ts",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\scripts\\test-agent.ts",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/index.ts",
+      "targetFolder": "features"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/scripts/test-agent.ts",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\scripts\\test-agent.ts",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/credits/constants.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/scripts/test-agent.ts",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\scripts\\test-agent.ts",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/actions/credit-actions.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/scripts/test-agent.ts",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\scripts\\test-agent.ts",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/actions/agent-actions.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/scripts/test-tools.ts",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\scripts\\test-tools.ts",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/web-search.ts",
+      "targetFolder": "features"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/scripts/test-tools.ts",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\scripts\\test-tools.ts",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/email-automate.ts",
+      "targetFolder": "features"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/scripts/test-tools.ts",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\scripts\\test-tools.ts",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/supabase/admin.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/scripts/test-tools.ts",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\scripts\\test-tools.ts",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/db-read-write.ts",
+      "targetFolder": "features"
+    }
+  ]
+}

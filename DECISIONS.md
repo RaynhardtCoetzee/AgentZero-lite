@@ -218,3 +218,30 @@ Reason: Optimistic deduction + rollback on failure means a standing deduction IS
 Trade-offs: Credits are locked at run start, not confirmed at run end. Acceptable given rollback covers all failure paths.
 
 Decision: All agents share the same tool library in V1. Per-agent tool configuration deferred to V2. Architecture supports it via a tools config column — not built yet because the V1 differentiation via agent-scoped knowledge bases is sufficient for launch.
+
+
+
+**Date:** Phase 0, Day 9 (April 22, 2026)  
+### Decision: Internal-First Deployment of System Tools
+**Date:** Phase 0, Day 9 (April 22, 2026)  
+**Alternatives considered:** Shipping `bash_execute` and `file_manager` tools in the initial AgentZero Pro public launch.  
+**Reason:** To reduce development overhead for the internal studio and safely test "high-risk" autonomous capabilities without exposing the public SaaS to security vulnerabilities. This allows for a "dogfooding" phase to refine the RSI (Recursive Self-Improvement) loops before commercialization.  
+**Trade-offs:** The public version remains a "Capability Harness" while the internal version becomes the "Engineering Harness," requiring strict separation of documentation and internal logic.
+
+### Decision: Decoupled Project Workspace Architecture
+**Date:** Phase 0, Day 9 (April 22, 2026)  
+**Alternatives:** Integrating target projects directly into the AgentZero monorepo.  
+**Reason:** To ensure **Model Sovereignty** and environment safety. Using isolated **Git Worktrees** allows coding agents to run `npm run dev` and `npx tsc` in a sandbox without "tripping" over the founder's active development branch or corrupting the main system state.  
+**Trade-offs:** Requires more complex server-side file management and increased disk space for isolated `node_modules` per active project.
+
+### Decision: Extrinsic Recursive Self-Evolution (RSI) via Skill Factory
+**Date:** Phase 0, Day 9 (April 22, 2026)  
+**Alternatives:** Waiting for frontier labs to solve Weight-based RSI (Recursive Self-Improvement).  
+**Reason:** By using an **Evaluator-Optimizer loop**, AgentZero can analyze its own terminal logs and automatically generate/update `.md` formatted **Skills** to prevent regression. This closes the gap with proprietary tools like Claude Code by automating "Workflow Discipline."  
+**Trade-offs:** Relies heavily on "Model-as-Judge" quality; requires the founder (Vibe Architect) to act as the final gatekeeper for critical architectural commits.
+
+### Decision: Multi-Tenant Persistent Memory for Agency Tier
+**Date:** Phase 0, Day 9 (April 22, 2026)  
+**Alternatives:** Session-based memory typical of standard developer CLI tools.  
+**Reason:** To create a long-term competitive moat and increase exit valuation. **pgvector RAG** allows agents to retain project-specific "wisdom" and architectural context across months, which is essential for the high-margin **Agency Tier**.  
+**Trade-offs:** Higher Supabase storage costs as vector data and indexed project history compound over time.

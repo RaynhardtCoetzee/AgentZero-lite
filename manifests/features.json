@@ -1,0 +1,448 @@
+{
+  "folder": "features",
+  "folderPath": "C:/Users/owner/OneDrive/Desktop/01agentzero/features",
+  "nodes": [
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/features",
+      "name": "features",
+      "type": "folder",
+      "parent": null,
+      "depth": 1
+    },
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools",
+      "name": "tools",
+      "type": "folder",
+      "parent": "C:/Users/owner/OneDrive/Desktop/01agentzero/features",
+      "depth": 2
+    },
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/db-read-write.ts",
+      "name": "db-read-write.ts",
+      "type": "source",
+      "parent": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools",
+      "depth": 3,
+      "filePath": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\features\\tools\\db-read-write.ts",
+      "description": "Supabase read/write tool",
+      "complexity": 25,
+      "coupling": 13,
+      "linesOfCode": 202,
+      "exportCount": 2
+    },
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/email-automate.ts",
+      "name": "email-automate.ts",
+      "type": "source",
+      "parent": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools",
+      "depth": 3,
+      "filePath": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\features\\tools\\email-automate.ts",
+      "description": "Resend email automation tool",
+      "complexity": 9,
+      "coupling": 11,
+      "linesOfCode": 94,
+      "exportCount": 1
+    },
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/index.ts",
+      "name": "index.ts",
+      "type": "source",
+      "parent": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools",
+      "depth": 3,
+      "filePath": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\features\\tools\\index.ts",
+      "complexity": 28,
+      "coupling": 21,
+      "linesOfCode": 4,
+      "exportCount": 4
+    },
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/knowledge-search.ts",
+      "name": "knowledge-search.ts",
+      "type": "source",
+      "parent": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools",
+      "depth": 3,
+      "filePath": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\features\\tools\\knowledge-search.ts",
+      "description": "Team knowledge search tool",
+      "complexity": 27,
+      "coupling": 18,
+      "linesOfCode": 70,
+      "exportCount": 2
+    },
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/web-search.ts",
+      "name": "web-search.ts",
+      "type": "source",
+      "parent": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools",
+      "depth": 3,
+      "filePath": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\features\\tools\\web-search.ts",
+      "description": "Tavily web search tool",
+      "complexity": 9,
+      "coupling": 11,
+      "linesOfCode": 89,
+      "exportCount": 2
+    }
+  ],
+  "internalLinks": [
+    {
+      "source": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/index.ts",
+      "target": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/web-search.ts"
+    },
+    {
+      "source": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/index.ts",
+      "target": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/email-automate.ts"
+    },
+    {
+      "source": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/index.ts",
+      "target": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/db-read-write.ts"
+    },
+    {
+      "source": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/index.ts",
+      "target": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/knowledge-search.ts"
+    }
+  ],
+  "externalIngress": [
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/agents/_components/AgentsPageContent.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/web-search.ts",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\features\\tools\\web-search.ts"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/agents/_components/AgentsPageContent.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/email-automate.ts",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\features\\tools\\email-automate.ts"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/agents/_components/AgentsPageContent.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/db-read-write.ts",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\features\\tools\\db-read-write.ts"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/agents/_components/AgentsPageContent.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/knowledge-search.ts",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\features\\tools\\knowledge-search.ts"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/agents/_components/AgentsPageContent.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/index.ts",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\features\\tools\\index.ts"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/agents/[agentId]/_components/AgentDetailClient.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/web-search.ts",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\features\\tools\\web-search.ts"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/agents/[agentId]/_components/AgentDetailClient.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/email-automate.ts",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\features\\tools\\email-automate.ts"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/agents/[agentId]/_components/AgentDetailClient.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/db-read-write.ts",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\features\\tools\\db-read-write.ts"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/agents/[agentId]/_components/AgentDetailClient.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/knowledge-search.ts",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\features\\tools\\knowledge-search.ts"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/agents/[agentId]/_components/AgentDetailClient.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/index.ts",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\features\\tools\\index.ts"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/agents/[agentId]/page.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/web-search.ts",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\features\\tools\\web-search.ts"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/agents/[agentId]/page.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/email-automate.ts",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\features\\tools\\email-automate.ts"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/agents/[agentId]/page.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/db-read-write.ts",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\features\\tools\\db-read-write.ts"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/agents/[agentId]/page.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/knowledge-search.ts",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\features\\tools\\knowledge-search.ts"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/agents/[agentId]/page.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/index.ts",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\features\\tools\\index.ts"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/agents/page.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/web-search.ts",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\features\\tools\\web-search.ts"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/agents/page.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/email-automate.ts",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\features\\tools\\email-automate.ts"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/agents/page.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/db-read-write.ts",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\features\\tools\\db-read-write.ts"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/agents/page.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/knowledge-search.ts",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\features\\tools\\knowledge-search.ts"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/agents/page.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/index.ts",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\features\\tools\\index.ts"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/AgentChat.tsx",
+      "sourceFolder": "components",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/web-search.ts",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\features\\tools\\web-search.ts"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/AgentChat.tsx",
+      "sourceFolder": "components",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/email-automate.ts",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\features\\tools\\email-automate.ts"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/AgentChat.tsx",
+      "sourceFolder": "components",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/db-read-write.ts",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\features\\tools\\db-read-write.ts"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/AgentChat.tsx",
+      "sourceFolder": "components",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/knowledge-search.ts",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\features\\tools\\knowledge-search.ts"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/AgentChat.tsx",
+      "sourceFolder": "components",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/index.ts",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\features\\tools\\index.ts"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/RunPanel.tsx",
+      "sourceFolder": "components",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/web-search.ts",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\features\\tools\\web-search.ts"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/RunPanel.tsx",
+      "sourceFolder": "components",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/email-automate.ts",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\features\\tools\\email-automate.ts"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/RunPanel.tsx",
+      "sourceFolder": "components",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/db-read-write.ts",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\features\\tools\\db-read-write.ts"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/RunPanel.tsx",
+      "sourceFolder": "components",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/knowledge-search.ts",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\features\\tools\\knowledge-search.ts"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/RunPanel.tsx",
+      "sourceFolder": "components",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/index.ts",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\features\\tools\\index.ts"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/hooks/use-agent-stream.ts",
+      "sourceFolder": "hooks",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/web-search.ts",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\features\\tools\\web-search.ts"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/hooks/use-agent-stream.ts",
+      "sourceFolder": "hooks",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/email-automate.ts",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\features\\tools\\email-automate.ts"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/hooks/use-agent-stream.ts",
+      "sourceFolder": "hooks",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/db-read-write.ts",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\features\\tools\\db-read-write.ts"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/hooks/use-agent-stream.ts",
+      "sourceFolder": "hooks",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/knowledge-search.ts",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\features\\tools\\knowledge-search.ts"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/hooks/use-agent-stream.ts",
+      "sourceFolder": "hooks",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/index.ts",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\features\\tools\\index.ts"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/actions/agent-actions.ts",
+      "sourceFolder": "lib",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/web-search.ts",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\features\\tools\\web-search.ts"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/actions/agent-actions.ts",
+      "sourceFolder": "lib",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/email-automate.ts",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\features\\tools\\email-automate.ts"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/actions/agent-actions.ts",
+      "sourceFolder": "lib",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/db-read-write.ts",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\features\\tools\\db-read-write.ts"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/actions/agent-actions.ts",
+      "sourceFolder": "lib",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/knowledge-search.ts",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\features\\tools\\knowledge-search.ts"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/actions/agent-actions.ts",
+      "sourceFolder": "lib",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/index.ts",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\features\\tools\\index.ts"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/scripts/test-agent.ts",
+      "sourceFolder": "scripts",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/web-search.ts",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\features\\tools\\web-search.ts"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/scripts/test-agent.ts",
+      "sourceFolder": "scripts",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/email-automate.ts",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\features\\tools\\email-automate.ts"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/scripts/test-agent.ts",
+      "sourceFolder": "scripts",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/db-read-write.ts",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\features\\tools\\db-read-write.ts"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/scripts/test-agent.ts",
+      "sourceFolder": "scripts",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/knowledge-search.ts",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\features\\tools\\knowledge-search.ts"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/scripts/test-agent.ts",
+      "sourceFolder": "scripts",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/index.ts",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\features\\tools\\index.ts"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/scripts/test-tools.ts",
+      "sourceFolder": "scripts",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/web-search.ts",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\features\\tools\\web-search.ts"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/scripts/test-tools.ts",
+      "sourceFolder": "scripts",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/email-automate.ts",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\features\\tools\\email-automate.ts"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/scripts/test-tools.ts",
+      "sourceFolder": "scripts",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/db-read-write.ts",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\features\\tools\\db-read-write.ts"
+    }
+  ],
+  "externalEgress": [
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/db-read-write.ts",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\features\\tools\\db-read-write.ts",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/supabase/admin.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/index.ts",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\features\\tools\\index.ts",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/supabase/admin.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/index.ts",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\features\\tools\\index.ts",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/supabase/queries.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/index.ts",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\features\\tools\\index.ts",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/ai/embeddings.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/index.ts",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\features\\tools\\index.ts",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/actions/agent-crud-actions.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/knowledge-search.ts",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\features\\tools\\knowledge-search.ts",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/supabase/admin.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/knowledge-search.ts",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\features\\tools\\knowledge-search.ts",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/supabase/queries.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/knowledge-search.ts",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\features\\tools\\knowledge-search.ts",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/ai/embeddings.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/knowledge-search.ts",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\features\\tools\\knowledge-search.ts",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/actions/agent-crud-actions.ts",
+      "targetFolder": "lib"
+    }
+  ]
+}

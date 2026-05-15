@@ -23,7 +23,7 @@
 
 import { streamText, stepCountIs } from "ai";
 import { getModel } from "@/lib/ai/provider-factory";
-import { webSearchTool, emailAutomateTool, dbReadTool, dbWriteTool } from "@/features/tools";
+import * as tools from "@/features/tools";
 import { z } from "zod";
 import { auth } from "@/auth";
 import { adminClient } from "@/lib/supabase/admin";
@@ -37,8 +37,8 @@ import { checkUserCredits, deductCredits, rollbackCredits, DeductCreditsResult }
 
 export type StreamEvent =
   | { type: "text-delta";  delta: string }
-  | { type: "tool-call";   toolName: string }
-  | { type: "tool-result"; toolName: string }
+  | { type: "tool-call";   toolName: string; toolCallId: string; input: unknown }
+  | { type: "tool-result"; toolName: string; toolCallId: string; output: unknown }
   | { type: "done" }
   | { type: "error";       message: string };
 
@@ -50,11 +50,48 @@ const runAgentSchema = z.object({
     .min(1)
     .max(10_000)
     .describe("The user prompt to send to the agent"),
+  modelId: z
+    .string()
+    .optional()
+    .describe("Model ID override for this run"),
+  enabledTools: z
+    .array(z.string())
+    .optional()
+    .describe("Tool IDs to enable for this run"),
+  attachments: z
+    .any()
+    .optional()
+    .describe("Message content with attachments (images)"),
 });
 
 // ─── Base system prompt ───────────────────────────────────────────────────────
 
-const BASE_INSTRUCTIONS = "You are AgentZero, a helpful AI assistant.";
+const BASE_INSTRUCTIONS = `You are AgentZero, an intelligent AI assistant. \
+Always attempt to answer using your available tools before asking for more context.
+
+## Tool-use priority (follow in order)
+1. Questions containing "why", "what is the reason", "how does X work", or any strategic / \
+   contextual question → call knowledgeSearchTool FIRST to check this org's uploaded documents.
+2. Questions requiring up-to-date external information not in the knowledge base → call webSearchTool.
+3. Only ask the user for clarification AFTER you have exhausted relevant tool calls and still lack \
+   enough information to answer.
+
+## Available tools
+- **knowledgeSearchTool** — Semantic search over this org's memo_summaries (uploaded documents, \
+  business plans, product memos). Scoped to the current organisation — it will NOT find documents \
+  from other orgs. The authoritative source for any "why" or strategic question.
+- **webSearchTool** — Real-time web search. Use only when the knowledge base cannot answer the question.
+
+## Error recovery rules
+- **knowledgeSearchTool returns 0 results**: retry immediately with minSimilarity: 0.2 and rephrase \
+  the query using synonyms (e.g. "business plan" → "revenue strategy roadmap goals"). Report failure \
+  only after two attempts.
+
+## Knowledge base scope
+The knowledgeSearchTool searches memo_summaries scoped to this organisation's ID only. It does NOT \
+search documents from other organisations or external systems. If you cannot find a specific document \
+after two retries, tell the user it has not been saved to this org's knowledge base yet and suggest \
+they upload it via the Knowledge page.`;
 
 // ─── Cached RAG context fetch ─────────────────────────────────────────────────
 // 'use cache' derives its key from the serialized function arguments.
@@ -62,9 +99,9 @@ const BASE_INSTRUCTIONS = "You are AgentZero, a helpful AI assistant.";
 // per-org when no agentId is supplied). 'use cache' derives its key from all
 // serialised arguments, so org-level and agent-level entries don't collide.
 //
-// matchThreshold is intentionally low (0.1) during development so the pipeline
-// can be verified end-to-end before real embeddings are funded. Raise back to
-// 0.7 in production to avoid injecting irrelevant context.
+// matchThreshold is read from RAG_MATCH_THRESHOLD env var, defaulting to 0.1.
+
+const RAG_MATCH_THRESHOLD = parseFloat(process.env.RAG_MATCH_THRESHOLD ?? "0.1");
 
 async function fetchRagContext(
   query: string,
@@ -80,8 +117,8 @@ async function fetchRagContext(
     // Agent-scoped: only chunks from documents uploaded to this agent.
     // Org-scoped fallback: all org documents (legacy / org-level uploads).
     const chunks = agentId
-      ? await semanticSearchForAgent(embedding, agentId, adminClient, undefined, 0.1)
-      : await semanticSearch(embedding, orgId, adminClient, undefined, 0.1);
+      ? await semanticSearchForAgent(embedding, agentId, adminClient, undefined, RAG_MATCH_THRESHOLD)
+      : await semanticSearch(embedding, orgId, adminClient, undefined, RAG_MATCH_THRESHOLD);
 
     if (chunks.length === 0) return null;
 
@@ -111,11 +148,41 @@ function errorStream(message: string): AsyncIterable<StreamEvent> {
   })();
 }
 
+// ─── Tool filtering helper ─────────────────────────────────────────────────────
+// Maps registry IDs to exported tool names and returns filtered subset.
+
+function filterToolsByIds(toolIds: string[]): Record<string, any> {
+  const idToExportName: Record<string, string[]> = {
+    web_search: ["webSearchTool"],
+    knowledge:  ["knowledgeSearchTool"],
+  };
+
+  const filtered: Record<string, any> = {};
+  for (const registryId of toolIds) {
+    const exportNames = idToExportName[registryId];
+    if (exportNames) {
+      for (const exportName of exportNames) {
+        if (exportName in tools) {
+          filtered[exportName] = (tools as Record<string, any>)[exportName];
+        }
+      }
+    }
+  }
+  // Knowledge search is invisible RAG plumbing — always available to the
+  // model regardless of UI toggles, so the LLM can actively pull more context
+  // mid-conversation in addition to the pre-stream RAG injection.
+  if ("knowledgeSearchTool" in tools) {
+    filtered.knowledgeSearchTool = (tools as Record<string, any>).knowledgeSearchTool;
+  }
+  return filtered;
+}
+
 // ─── Streaming Server Action ──────────────────────────────────────────────────
 
 export async function streamAgentAction(
   rawPrompt: string,
   rawAgentId?: string,
+  options?: { modelId?: string; enabledTools?: string[]; attachments?: any },
 ): Promise<AsyncIterable<StreamEvent>> {
   // ── Auth guard ─────────────────────────────────────────────────────────────
   // Runs before the generator is returned. Unauthenticated callers receive a
@@ -127,7 +194,12 @@ export async function streamAgentAction(
   const { orgId } = session.user;
 
   // ── Input validation ───────────────────────────────────────────────────────
-  const parsed = runAgentSchema.safeParse({ prompt: rawPrompt });
+  const parsed = runAgentSchema.safeParse({
+    prompt: rawPrompt,
+    modelId: options?.modelId,
+    enabledTools: options?.enabledTools,
+    attachments: options?.attachments,
+  });
   if (!parsed.success) {
     return errorStream(`Invalid input: ${parsed.error.message}`);
   }
@@ -152,7 +224,7 @@ export async function streamAgentAction(
   }
 
   // ── Credit pre-flight ──────────────────────────────────────────────────────
-  const creditCheck = { allowed: true as const };
+  const creditCheck = { ok: true as const, allowed: true as const };
 
   // ── RAG context ────────────────────────────────────────────────────────────
   // Runs before the generator is returned. If the org has relevant document
@@ -173,13 +245,27 @@ export async function streamAgentAction(
   // React 19 Flight serialises AsyncIterable natively — the generator is
   // returned immediately and each yielded StreamEvent is transferred to the
   // client as it is produced. The client iterates with a plain `for await`.
-  const result = streamText({
-    model:    getModel(),
-    system:   instructions,
-    prompt:   parsed.data.prompt,
-    tools:    { webSearchTool, emailAutomateTool, dbReadTool, dbWriteTool },
-    stopWhen: stepCountIs(10),   // ReAct loop cap — prevents runaway tool chains
-  });
+  const selectedTools = parsed.data.enabledTools
+    ? filterToolsByIds(parsed.data.enabledTools)
+    : { ...tools };
+
+  console.log("[streamAgentAction] Model:", parsed.data.modelId, "Prompt:", parsed.data.prompt?.slice(0, 50));
+
+  const result = parsed.data.attachments
+    ? streamText({
+        model:    getModel(parsed.data.modelId),
+        system:   instructions,
+        messages: [{ role: "user", content: parsed.data.attachments.content }],
+        tools:    selectedTools,
+        stopWhen: stepCountIs(10),
+      })
+    : streamText({
+        model:    getModel(parsed.data.modelId),
+        system:   instructions,
+        prompt:   parsed.data.prompt,
+        tools:    selectedTools,
+        stopWhen: stepCountIs(10),
+      });
 
   return (async function* () {
     // Tracks legitimately open text blocks by their id.
@@ -199,6 +285,7 @@ export async function streamAgentAction(
       }
 
       for await (const chunk of result.fullStream) {
+        console.log("[stream] Received chunk type:", chunk.type, JSON.stringify(chunk).slice(0, 200));
         switch (chunk.type) {
           case "text-start":
             openTextIds.add(chunk.id);
@@ -213,10 +300,10 @@ export async function streamAgentAction(
             }
             break;
           case "tool-call":
-            yield { type: "tool-call" as const, toolName: chunk.toolName };
+            yield { type: "tool-call" as const, toolName: chunk.toolName, toolCallId: chunk.toolCallId, input: chunk.input as unknown };
             break;
           case "tool-result":
-            yield { type: "tool-result" as const, toolName: chunk.toolName };
+            yield { type: "tool-result" as const, toolName: chunk.toolName, toolCallId: chunk.toolCallId, output: chunk.output as unknown };
             break;
           case "error": {
             const raw = chunk.error;

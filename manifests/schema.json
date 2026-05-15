@@ -1,0 +1,356 @@
+{
+  "tables": [
+    {
+      "id": "organisations",
+      "name": "organisations",
+      "columns": [
+        {
+          "name": "id",
+          "type": "UUID"
+        },
+        {
+          "name": "name",
+          "type": "TEXT"
+        },
+        {
+          "name": "slug",
+          "type": "TEXT"
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMPTZ"
+        }
+      ],
+      "foreignKeys": []
+    },
+    {
+      "id": "users",
+      "name": "users",
+      "columns": [
+        {
+          "name": "id",
+          "type": "UUID"
+        },
+        {
+          "name": "email",
+          "type": "TEXT"
+        },
+        {
+          "name": "name",
+          "type": "TEXT"
+        },
+        {
+          "name": "organisation_id",
+          "type": "UUID"
+        },
+        {
+          "name": "password_hash",
+          "type": "TEXT"
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMPTZ"
+        }
+      ],
+      "foreignKeys": [
+        {
+          "column": "organisation_id",
+          "referencedTable": "organisations",
+          "referencedColumn": "id"
+        }
+      ]
+    },
+    {
+      "id": "agents",
+      "name": "agents",
+      "columns": [
+        {
+          "name": "id",
+          "type": "UUID"
+        },
+        {
+          "name": "name",
+          "type": "TEXT"
+        },
+        {
+          "name": "instructions",
+          "type": "TEXT"
+        },
+        {
+          "name": "organisation_id",
+          "type": "UUID"
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMPTZ"
+        }
+      ],
+      "foreignKeys": [
+        {
+          "column": "organisation_id",
+          "referencedTable": "organisations",
+          "referencedColumn": "id"
+        }
+      ]
+    },
+    {
+      "id": "subscriptions",
+      "name": "subscriptions",
+      "columns": [
+        {
+          "name": "id",
+          "type": "UUID"
+        },
+        {
+          "name": "user_id",
+          "type": "UUID"
+        },
+        {
+          "name": "ls_subscription_id",
+          "type": "TEXT"
+        },
+        {
+          "name": "ls_customer_id",
+          "type": "BIGINT"
+        },
+        {
+          "name": "ls_variant_id",
+          "type": "BIGINT"
+        },
+        {
+          "name": "tier",
+          "type": "TEXT"
+        },
+        {
+          "name": "status",
+          "type": "TEXT"
+        },
+        {
+          "name": "expired)",
+          "type": ")"
+        },
+        {
+          "name": "renews_at",
+          "type": "TIMESTAMPTZ"
+        },
+        {
+          "name": "ends_at",
+          "type": "TIMESTAMPTZ"
+        },
+        {
+          "name": "trial_ends_at",
+          "type": "TIMESTAMPTZ"
+        },
+        {
+          "name": "--",
+          "type": "Set"
+        },
+        {
+          "name": "review_reason",
+          "type": "TEXT"
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMPTZ"
+        },
+        {
+          "name": "updated_at",
+          "type": "TIMESTAMPTZ"
+        }
+      ],
+      "foreignKeys": [
+        {
+          "column": "user_id",
+          "referencedTable": "users",
+          "referencedColumn": "id"
+        }
+      ]
+    },
+    {
+      "id": "webhook_events",
+      "name": "webhook_events",
+      "columns": [
+        {
+          "name": "id",
+          "type": "BIGSERIAL"
+        },
+        {
+          "name": "body_hash",
+          "type": "TEXT"
+        },
+        {
+          "name": "event_name",
+          "type": "TEXT"
+        },
+        {
+          "name": "ls_resource_id",
+          "type": "TEXT"
+        },
+        {
+          "name": "raw_payload",
+          "type": "JSONB"
+        },
+        {
+          "name": "received_at",
+          "type": "TIMESTAMPTZ"
+        },
+        {
+          "name": "processed_at",
+          "type": "TIMESTAMPTZ"
+        },
+        {
+          "name": "error",
+          "type": "TEXT"
+        }
+      ],
+      "foreignKeys": []
+    },
+    {
+      "id": "founding_grants",
+      "name": "founding_grants",
+      "columns": [
+        {
+          "name": "id",
+          "type": "UUID"
+        },
+        {
+          "name": "user_id",
+          "type": "UUID"
+        },
+        {
+          "name": "ls_order_id",
+          "type": "TEXT"
+        },
+        {
+          "name": "amount",
+          "type": "INT"
+        },
+        {
+          "name": "granted_at",
+          "type": "TIMESTAMPTZ"
+        },
+        {
+          "name": "revoked_at",
+          "type": "TIMESTAMPTZ"
+        },
+        {
+          "name": "needs_manual_review",
+          "type": "BOOLEAN"
+        },
+        {
+          "name": "review_reason",
+          "type": "TEXT"
+        }
+      ],
+      "foreignKeys": [
+        {
+          "column": "user_id",
+          "referencedTable": "users",
+          "referencedColumn": "id"
+        }
+      ]
+    },
+    {
+      "id": "conversations",
+      "name": "conversations",
+      "columns": [
+        {
+          "name": "id",
+          "type": "UUID"
+        },
+        {
+          "name": "agent_id",
+          "type": "UUID"
+        },
+        {
+          "name": "organisation_id",
+          "type": "UUID"
+        },
+        {
+          "name": "title",
+          "type": "TEXT"
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMPTZ"
+        },
+        {
+          "name": "updated_at",
+          "type": "TIMESTAMPTZ"
+        }
+      ],
+      "foreignKeys": [
+        {
+          "column": "agent_id",
+          "referencedTable": "agents",
+          "referencedColumn": "id"
+        },
+        {
+          "column": "organisation_id",
+          "referencedTable": "organisations",
+          "referencedColumn": "id"
+        }
+      ]
+    },
+    {
+      "id": "conversation_messages",
+      "name": "conversation_messages",
+      "columns": [
+        {
+          "name": "id",
+          "type": "UUID"
+        },
+        {
+          "name": "conversation_id",
+          "type": "UUID"
+        },
+        {
+          "name": "role",
+          "type": "TEXT"
+        },
+        {
+          "name": "content",
+          "type": "TEXT"
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMPTZ"
+        }
+      ],
+      "foreignKeys": [
+        {
+          "column": "conversation_id",
+          "referencedTable": "conversations",
+          "referencedColumn": "id"
+        }
+      ]
+    }
+  ],
+  "functions": [
+    {
+      "name": "match_agent_chunks",
+      "returnType": "TABLE"
+    },
+    {
+      "name": "grant_user_credits",
+      "returnType": "VOID"
+    },
+    {
+      "name": "grant_founding_credits",
+      "returnType": "TEXT"
+    },
+    {
+      "name": "revoke_founding_credits",
+      "returnType": "TEXT"
+    },
+    {
+      "name": "revoke_subscription_invoice_credits",
+      "returnType": "TEXT"
+    },
+    {
+      "name": "match_memo_summaries",
+      "returnType": "TABLE"
+    }
+  ],
+  "enums": []
+}

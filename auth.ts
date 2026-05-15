@@ -65,10 +65,11 @@ const credentialsSchema = z.object({
 
 // ─── Auth configuration ───────────────────────────────────────────────────────
 
-export const { auth, signIn, signOut } = NextAuth({
+export const { auth, signIn, signOut, handlers } = NextAuth({
   /**
-   * No `handlers` export — we do NOT mount an /api/auth route.
-   * signIn() and signOut() are called directly as Server Actions.
+   * Handlers are exported to mount the /api/auth route.
+   * SessionProvider uses this endpoint to refresh the session.
+   * signIn() and signOut() are still called as Server Actions from the UI.
    */
 
   trustHost: true,

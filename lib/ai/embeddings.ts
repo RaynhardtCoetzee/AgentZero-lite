@@ -7,8 +7,13 @@
  *   3. semanticSearch     — query vector → ranked chunks via match_chunks RPC
  *
  * Embedding provider is controlled by EMBEDDING_PROVIDER env var:
- *   "openai"  — text-embedding-3-small, 1536 dimensions (default for production)
- *   "cohere"  — embed-english-v3.0, 1024 dimensions (free tier, good for dev/testing)
+ *   "openai"   — text-embedding-3-small, 1536 dimensions (default for production)
+ *   "cohere"   — embed-english-v3.0, 1024 dimensions (free tier, good for dev/testing)
+ *   "nvidia"   — nv-embed-qa-mistral-7b-v3, 1024 dimensions (NVIDIA NIMs, enterprise)
+ *
+ * For NVIDIA NIMs, also set:
+ *   NVIDIA_NIMS_BASE_URL — your NIMs endpoint (e.g., https://integrate.api.nvidia.com/v1)
+ *   NVIDIA_NIMS_API_KEY  — your NVIDIA API key
  *
  * ⚠️  Dimension mismatch warning:
  *   Switching providers on an existing database requires re-embedding all chunks
@@ -27,7 +32,7 @@
  */
 
 import { embed } from "ai";
-import { openai } from "@ai-sdk/openai";
+import { openai, createOpenAI } from "@ai-sdk/openai";
 import { cohere } from "@ai-sdk/cohere";
 import { z } from "zod";
 import type { SupabaseClient } from "@supabase/supabase-js";
@@ -36,13 +41,13 @@ import type { SupabaseClient } from "@supabase/supabase-js";
 // Provider resolution
 // ---------------------------------------------------------------------------
 
-type EmbeddingProvider = "openai" | "cohere";
+type EmbeddingProvider = "openai" | "cohere" | "nvidia";
 
 function getEmbeddingProvider(): EmbeddingProvider {
   const val = process.env.EMBEDDING_PROVIDER ?? "openai";
-  if (val === "openai" || val === "cohere") return val;
+  if (val === "openai" || val === "cohere" || val === "nvidia") return val;
   throw new Error(
-    `Unknown EMBEDDING_PROVIDER: "${val}". Valid values: "openai" | "cohere"`
+    `Unknown EMBEDDING_PROVIDER: "${val}". Valid values: "openai" | "cohere" | "nvidia"`
   );
 }
 
@@ -54,6 +59,18 @@ function getEmbeddingModel(): { model: Parameters<typeof embed>[0]["model"]; dim
       return { model: openai.embedding("text-embedding-3-small"), dimensions: 1536 };
     case "cohere":
       return { model: cohere.embedding("embed-english-v3.0"), dimensions: 1024 };
+    case "nvidia": {
+      const baseURL = process.env.NVIDIA_NIMS_BASE_URL;
+      const apiKey = process.env.NVIDIA_NIMS_API_KEY;
+      if (!baseURL || !apiKey) {
+        throw new Error("NVIDIA_NIMS_BASE_URL and NVIDIA_NIMS_API_KEY required for nvidia provider");
+      }
+      const nvidiaClient = createOpenAI({ baseURL, apiKey });
+      return {
+        model: nvidiaClient.embedding("nv-embed-qa-mistral-7b-v3"),
+        dimensions: 1024,
+      };
+    }
   }
 }
 

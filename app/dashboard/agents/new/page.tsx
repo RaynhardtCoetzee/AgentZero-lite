@@ -1,9 +1,7 @@
 /**
  * app/dashboard/agents/new/page.tsx — New Agent
  *
- * Template picker → model selector → tool toggles → createAgent() → redirect.
- * The UI collects intent (name, template, model, tools). createAgent() is called
- * on submit; the created ID is used to redirect to the detail page.
+ * Minimal V1 form: name + system prompt → createAgent() → redirect.
  */
 
 import type { Metadata } from "next";
@@ -15,11 +13,11 @@ export const metadata: Metadata = {
 
 export default function NewAgentPage() {
   return (
-    <div className="mx-auto max-w-2xl space-y-6">
-      <div>
-        <h1 className="text-lg font-semibold text-foreground">New Agent</h1>
-        <p className="mt-0.5 text-sm text-muted-foreground">
-          Pick a template to get started quickly, or build from scratch.
+    <div className="mx-auto max-w-2xl space-y-6 sm:space-y-8">
+      <div className="space-y-1.5 sm:space-y-2">
+        <h1 className="text-xl sm:text-2xl font-bold text-foreground">New Agent</h1>
+        <p className="text-sm sm:text-base text-muted-foreground">
+          Give your agent a name and a system prompt. You can edit it later.
         </p>
       </div>
 

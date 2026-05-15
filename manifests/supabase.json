@@ -1,0 +1,56 @@
+{
+  "folder": "supabase",
+  "folderPath": "C:/Users/owner/OneDrive/Desktop/01agentzero/supabase",
+  "nodes": [
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/supabase",
+      "name": "supabase",
+      "type": "folder",
+      "parent": null,
+      "depth": 1
+    },
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/supabase/.temp",
+      "name": ".temp",
+      "type": "folder",
+      "parent": "C:/Users/owner/OneDrive/Desktop/01agentzero/supabase",
+      "depth": 2
+    },
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/supabase/functions",
+      "name": "functions",
+      "type": "folder",
+      "parent": "C:/Users/owner/OneDrive/Desktop/01agentzero/supabase",
+      "depth": 2
+    },
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/supabase/functions/embed-memo",
+      "name": "embed-memo",
+      "type": "folder",
+      "parent": "C:/Users/owner/OneDrive/Desktop/01agentzero/supabase/functions",
+      "depth": 3
+    },
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/supabase/functions/embed-memo/index.ts",
+      "name": "index.ts",
+      "type": "source",
+      "parent": "C:/Users/owner/OneDrive/Desktop/01agentzero/supabase/functions/embed-memo",
+      "depth": 4,
+      "filePath": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\supabase\\functions\\embed-memo\\index.ts",
+      "complexity": 4,
+      "coupling": 0,
+      "linesOfCode": 43,
+      "exportCount": 0
+    },
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/supabase/migrations",
+      "name": "migrations",
+      "type": "folder",
+      "parent": "C:/Users/owner/OneDrive/Desktop/01agentzero/supabase",
+      "depth": 2
+    }
+  ],
+  "internalLinks": [],
+  "externalIngress": [],
+  "externalEgress": []
+}

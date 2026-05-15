@@ -1,0 +1,180 @@
+{
+  "folder": "hooks",
+  "folderPath": "C:/Users/owner/OneDrive/Desktop/01agentzero/hooks",
+  "nodes": [
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/hooks",
+      "name": "hooks",
+      "type": "folder",
+      "parent": null,
+      "depth": 1
+    },
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/hooks/use-agent-stream.ts",
+      "name": "use-agent-stream.ts",
+      "type": "source",
+      "parent": "C:/Users/owner/OneDrive/Desktop/01agentzero/hooks",
+      "depth": 2,
+      "filePath": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\hooks\\use-agent-stream.ts",
+      "complexity": 96,
+      "coupling": 36,
+      "linesOfCode": 207,
+      "exportCount": 4
+    },
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/hooks/use-org.ts",
+      "name": "use-org.ts",
+      "type": "source",
+      "parent": "C:/Users/owner/OneDrive/Desktop/01agentzero/hooks",
+      "depth": 2,
+      "filePath": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\hooks\\use-org.ts",
+      "complexity": 1,
+      "coupling": 0,
+      "linesOfCode": 11,
+      "exportCount": 1
+    },
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/hooks/use-user.ts",
+      "name": "use-user.ts",
+      "type": "source",
+      "parent": "C:/Users/owner/OneDrive/Desktop/01agentzero/hooks",
+      "depth": 2,
+      "filePath": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\hooks\\use-user.ts",
+      "complexity": 1,
+      "coupling": 0,
+      "linesOfCode": 11,
+      "exportCount": 1
+    }
+  ],
+  "internalLinks": [],
+  "externalIngress": [
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/agents/_components/AgentsPageContent.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/hooks/use-agent-stream.ts",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\hooks\\use-agent-stream.ts"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/agents/[agentId]/_components/AgentDetailClient.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/hooks/use-agent-stream.ts",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\hooks\\use-agent-stream.ts"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/agents/[agentId]/page.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/hooks/use-agent-stream.ts",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\hooks\\use-agent-stream.ts"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/agents/page.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/hooks/use-agent-stream.ts",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\hooks\\use-agent-stream.ts"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/AgentChat.tsx",
+      "sourceFolder": "components",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/hooks/use-agent-stream.ts",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\hooks\\use-agent-stream.ts"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/RunPanel.tsx",
+      "sourceFolder": "components",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/hooks/use-agent-stream.ts",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\hooks\\use-agent-stream.ts"
+    }
+  ],
+  "externalEgress": [
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/hooks/use-agent-stream.ts",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\hooks\\use-agent-stream.ts",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/ai/model-registry.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/hooks/use-agent-stream.ts",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\hooks\\use-agent-stream.ts",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/ai/provider-factory.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/hooks/use-agent-stream.ts",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\hooks\\use-agent-stream.ts",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/web-search.ts",
+      "targetFolder": "features"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/hooks/use-agent-stream.ts",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\hooks\\use-agent-stream.ts",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/email-automate.ts",
+      "targetFolder": "features"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/hooks/use-agent-stream.ts",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\hooks\\use-agent-stream.ts",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/supabase/admin.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/hooks/use-agent-stream.ts",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\hooks\\use-agent-stream.ts",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/db-read-write.ts",
+      "targetFolder": "features"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/hooks/use-agent-stream.ts",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\hooks\\use-agent-stream.ts",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/supabase/queries.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/hooks/use-agent-stream.ts",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\hooks\\use-agent-stream.ts",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/ai/embeddings.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/hooks/use-agent-stream.ts",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\hooks\\use-agent-stream.ts",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/actions/agent-crud-actions.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/hooks/use-agent-stream.ts",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\hooks\\use-agent-stream.ts",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/knowledge-search.ts",
+      "targetFolder": "features"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/hooks/use-agent-stream.ts",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\hooks\\use-agent-stream.ts",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/index.ts",
+      "targetFolder": "features"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/hooks/use-agent-stream.ts",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\hooks\\use-agent-stream.ts",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/credits/constants.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/hooks/use-agent-stream.ts",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\hooks\\use-agent-stream.ts",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/actions/credit-actions.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/hooks/use-agent-stream.ts",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\hooks\\use-agent-stream.ts",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/actions/agent-actions.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/hooks/use-agent-stream.ts",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\hooks\\use-agent-stream.ts",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/actions/conversation-actions.ts",
+      "targetFolder": "lib"
+    }
+  ]
+}

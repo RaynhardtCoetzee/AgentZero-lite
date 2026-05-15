@@ -1,0 +1,1587 @@
+{
+  "folder": "components",
+  "folderPath": "C:/Users/owner/OneDrive/Desktop/01agentzero/components",
+  "nodes": [
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/components",
+      "name": "components",
+      "type": "folder",
+      "parent": null,
+      "depth": 1
+    },
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/auth",
+      "name": "auth",
+      "type": "folder",
+      "parent": "C:/Users/owner/OneDrive/Desktop/01agentzero/components",
+      "depth": 2
+    },
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/auth/LoginForm.tsx",
+      "name": "LoginForm.tsx",
+      "type": "source",
+      "parent": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/auth",
+      "depth": 3,
+      "filePath": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\auth\\LoginForm.tsx",
+      "complexity": 33,
+      "coupling": 9,
+      "linesOfCode": 130,
+      "exportCount": 1
+    },
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/auth/SignOutButton.tsx",
+      "name": "SignOutButton.tsx",
+      "type": "source",
+      "parent": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/auth",
+      "depth": 3,
+      "filePath": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\auth\\SignOutButton.tsx",
+      "complexity": 27,
+      "coupling": 11,
+      "linesOfCode": 48,
+      "exportCount": 1
+    },
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/auth/SignupForm.tsx",
+      "name": "SignupForm.tsx",
+      "type": "source",
+      "parent": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/auth",
+      "depth": 3,
+      "filePath": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\auth\\SignupForm.tsx",
+      "complexity": 31,
+      "coupling": 9,
+      "linesOfCode": 110,
+      "exportCount": 1
+    },
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard",
+      "name": "dashboard",
+      "type": "folder",
+      "parent": "C:/Users/owner/OneDrive/Desktop/01agentzero/components",
+      "depth": 2
+    },
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/AgentChat.tsx",
+      "name": "AgentChat.tsx",
+      "type": "source",
+      "parent": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard",
+      "depth": 3,
+      "filePath": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\AgentChat.tsx",
+      "complexity": 185,
+      "coupling": 45,
+      "linesOfCode": 832,
+      "exportCount": 1
+    },
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/AgentConfigPanel.tsx",
+      "name": "AgentConfigPanel.tsx",
+      "type": "source",
+      "parent": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard",
+      "depth": 3,
+      "filePath": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\AgentConfigPanel.tsx",
+      "complexity": 45,
+      "coupling": 16,
+      "linesOfCode": 154,
+      "exportCount": 1
+    },
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/AgentFeedSkeleton.tsx",
+      "name": "AgentFeedSkeleton.tsx",
+      "type": "source",
+      "parent": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard",
+      "depth": 3,
+      "filePath": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\AgentFeedSkeleton.tsx",
+      "description": "components/dashboard/AgentFeedSkeleton.tsx Suspense fallback for the AgentFeed component. Renders three placeholder agent cards that match the dark theme. The third card fades out to imply a longer list below the fold.",
+      "complexity": 4,
+      "coupling": 0,
+      "linesOfCode": 37,
+      "exportCount": 1
+    },
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/AssistantContent.tsx",
+      "name": "AssistantContent.tsx",
+      "type": "source",
+      "parent": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard",
+      "depth": 3,
+      "filePath": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\AssistantContent.tsx",
+      "complexity": 47,
+      "coupling": 8,
+      "linesOfCode": 418,
+      "exportCount": 1
+    },
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/BillingPanel.tsx",
+      "name": "BillingPanel.tsx",
+      "type": "source",
+      "parent": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard",
+      "depth": 3,
+      "filePath": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\BillingPanel.tsx",
+      "complexity": 52,
+      "coupling": 18,
+      "linesOfCode": 109,
+      "exportCount": 1
+    },
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/ChatKanban.tsx",
+      "name": "ChatKanban.tsx",
+      "type": "source",
+      "parent": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard",
+      "depth": 3,
+      "filePath": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\ChatKanban.tsx",
+      "complexity": 42,
+      "coupling": 12,
+      "linesOfCode": 219,
+      "exportCount": 1
+    },
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/CheckoutButton.tsx",
+      "name": "CheckoutButton.tsx",
+      "type": "source",
+      "parent": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard",
+      "depth": 3,
+      "filePath": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\CheckoutButton.tsx",
+      "complexity": 29,
+      "coupling": 12,
+      "linesOfCode": 36,
+      "exportCount": 1
+    },
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/ConversationHistory.tsx",
+      "name": "ConversationHistory.tsx",
+      "type": "source",
+      "parent": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard",
+      "depth": 3,
+      "filePath": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\ConversationHistory.tsx",
+      "complexity": 28,
+      "coupling": 8,
+      "linesOfCode": 82,
+      "exportCount": 1
+    },
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/GlobalStats.tsx",
+      "name": "GlobalStats.tsx",
+      "type": "source",
+      "parent": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard",
+      "depth": 3,
+      "filePath": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\GlobalStats.tsx",
+      "description": "components/dashboard/GlobalStats.tsx Server Component — NOT a cache boundary itself. The expensive DB queries are isolated in fetchStatsByIds() which carries its own \"use cache\" + 60s cacheLife. auth() (which reads headers()) is called here in the component body, outside any cache scope, and the extracted IDs are passed into the cached fetcher as arguments. Cache key = serialised (orgId, userId) — per-user, 60s TTL.",
+      "complexity": 23,
+      "coupling": 6,
+      "linesOfCode": 79,
+      "exportCount": 1
+    },
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/NewAgentForm.tsx",
+      "name": "NewAgentForm.tsx",
+      "type": "source",
+      "parent": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard",
+      "depth": 3,
+      "filePath": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\NewAgentForm.tsx",
+      "complexity": 61,
+      "coupling": 20,
+      "linesOfCode": 264,
+      "exportCount": 1
+    },
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/PageTransition.tsx",
+      "name": "PageTransition.tsx",
+      "type": "source",
+      "parent": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard",
+      "depth": 3,
+      "filePath": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\PageTransition.tsx",
+      "complexity": 2,
+      "coupling": 1,
+      "linesOfCode": 20,
+      "exportCount": 1
+    },
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/RunPanel.tsx",
+      "name": "RunPanel.tsx",
+      "type": "source",
+      "parent": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard",
+      "depth": 3,
+      "filePath": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\RunPanel.tsx",
+      "complexity": 148,
+      "coupling": 35,
+      "linesOfCode": 614,
+      "exportCount": 1
+    },
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/SettingsTabs.tsx",
+      "name": "SettingsTabs.tsx",
+      "type": "source",
+      "parent": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard",
+      "depth": 3,
+      "filePath": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\SettingsTabs.tsx",
+      "complexity": 12,
+      "coupling": 1,
+      "linesOfCode": 115,
+      "exportCount": 1
+    },
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/Sidebar.tsx",
+      "name": "Sidebar.tsx",
+      "type": "source",
+      "parent": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard",
+      "depth": 3,
+      "filePath": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\Sidebar.tsx",
+      "complexity": 46,
+      "coupling": 11,
+      "linesOfCode": 223,
+      "exportCount": 1
+    },
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/UploadKnowledge.tsx",
+      "name": "UploadKnowledge.tsx",
+      "type": "source",
+      "parent": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard",
+      "depth": 3,
+      "filePath": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\UploadKnowledge.tsx",
+      "complexity": 41,
+      "coupling": 12,
+      "linesOfCode": 163,
+      "exportCount": 1
+    },
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/landing",
+      "name": "landing",
+      "type": "folder",
+      "parent": "C:/Users/owner/OneDrive/Desktop/01agentzero/components",
+      "depth": 2
+    },
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/landing/HeroSection.tsx",
+      "name": "HeroSection.tsx",
+      "type": "source",
+      "parent": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/landing",
+      "depth": 3,
+      "filePath": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\landing\\HeroSection.tsx",
+      "complexity": 34,
+      "coupling": 1,
+      "linesOfCode": 343,
+      "exportCount": 1
+    },
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/landing/LandingNav.tsx",
+      "name": "LandingNav.tsx",
+      "type": "source",
+      "parent": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/landing",
+      "depth": 3,
+      "filePath": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\landing\\LandingNav.tsx",
+      "complexity": 4,
+      "coupling": 1,
+      "linesOfCode": 36,
+      "exportCount": 1
+    },
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/landing/ManifestSection.tsx",
+      "name": "ManifestSection.tsx",
+      "type": "source",
+      "parent": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/landing",
+      "depth": 3,
+      "filePath": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\landing\\ManifestSection.tsx",
+      "complexity": 10,
+      "coupling": 1,
+      "linesOfCode": 98,
+      "exportCount": 1
+    },
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/landing/StackStrip.tsx",
+      "name": "StackStrip.tsx",
+      "type": "source",
+      "parent": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/landing",
+      "depth": 3,
+      "filePath": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\landing\\StackStrip.tsx",
+      "complexity": 9,
+      "coupling": 3,
+      "linesOfCode": 22,
+      "exportCount": 1
+    },
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/landing/WaitlistForm.tsx",
+      "name": "WaitlistForm.tsx",
+      "type": "source",
+      "parent": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/landing",
+      "depth": 3,
+      "filePath": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\landing\\WaitlistForm.tsx",
+      "complexity": 15,
+      "coupling": 5,
+      "linesOfCode": 58,
+      "exportCount": 1
+    },
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui",
+      "name": "ui",
+      "type": "folder",
+      "parent": "C:/Users/owner/OneDrive/Desktop/01agentzero/components",
+      "depth": 2
+    },
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui/badge.tsx",
+      "name": "badge.tsx",
+      "type": "source",
+      "parent": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui",
+      "depth": 3,
+      "filePath": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\ui\\badge.tsx",
+      "complexity": 9,
+      "coupling": 9,
+      "linesOfCode": 44,
+      "exportCount": 1
+    },
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui/button.tsx",
+      "name": "button.tsx",
+      "type": "source",
+      "parent": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui",
+      "depth": 3,
+      "filePath": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\ui\\button.tsx",
+      "complexity": 11,
+      "coupling": 14,
+      "linesOfCode": 62,
+      "exportCount": 1
+    },
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui/card.tsx",
+      "name": "card.tsx",
+      "type": "source",
+      "parent": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui",
+      "depth": 3,
+      "filePath": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\ui\\card.tsx",
+      "complexity": 14,
+      "coupling": 2,
+      "linesOfCode": 94,
+      "exportCount": 1
+    },
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui/glass-card.tsx",
+      "name": "glass-card.tsx",
+      "type": "source",
+      "parent": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui",
+      "depth": 3,
+      "filePath": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\ui\\glass-card.tsx",
+      "complexity": 13,
+      "coupling": 2,
+      "linesOfCode": 84,
+      "exportCount": 1
+    },
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui/input.tsx",
+      "name": "input.tsx",
+      "type": "source",
+      "parent": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui",
+      "depth": 3,
+      "filePath": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\ui\\input.tsx",
+      "complexity": 7,
+      "coupling": 4,
+      "linesOfCode": 16,
+      "exportCount": 1
+    },
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui/label.tsx",
+      "name": "label.tsx",
+      "type": "source",
+      "parent": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui",
+      "depth": 3,
+      "filePath": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\ui\\label.tsx",
+      "complexity": 7,
+      "coupling": 2,
+      "linesOfCode": 20,
+      "exportCount": 1
+    },
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui/markdown-renderer.tsx",
+      "name": "markdown-renderer.tsx",
+      "type": "source",
+      "parent": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui",
+      "depth": 3,
+      "filePath": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\ui\\markdown-renderer.tsx",
+      "complexity": 15,
+      "coupling": 6,
+      "linesOfCode": 97,
+      "exportCount": 1
+    },
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui/progress.tsx",
+      "name": "progress.tsx",
+      "type": "source",
+      "parent": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui",
+      "depth": 3,
+      "filePath": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\ui\\progress.tsx",
+      "complexity": 8,
+      "coupling": 2,
+      "linesOfCode": 27,
+      "exportCount": 1
+    },
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui/select.tsx",
+      "name": "select.tsx",
+      "type": "source",
+      "parent": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui",
+      "depth": 3,
+      "filePath": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\ui\\select.tsx",
+      "complexity": 23,
+      "coupling": 2,
+      "linesOfCode": 179,
+      "exportCount": 1
+    },
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui/separator.tsx",
+      "name": "separator.tsx",
+      "type": "source",
+      "parent": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui",
+      "depth": 3,
+      "filePath": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\ui\\separator.tsx",
+      "complexity": 7,
+      "coupling": 6,
+      "linesOfCode": 24,
+      "exportCount": 1
+    },
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui/skeleton.tsx",
+      "name": "skeleton.tsx",
+      "type": "source",
+      "parent": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui",
+      "depth": 3,
+      "filePath": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\ui\\skeleton.tsx",
+      "complexity": 6,
+      "coupling": 4,
+      "linesOfCode": 11,
+      "exportCount": 1
+    },
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui/table.tsx",
+      "name": "table.tsx",
+      "type": "source",
+      "parent": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui",
+      "depth": 3,
+      "filePath": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\ui\\table.tsx",
+      "complexity": 16,
+      "coupling": 2,
+      "linesOfCode": 105,
+      "exportCount": 1
+    },
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui/tabs.tsx",
+      "name": "tabs.tsx",
+      "type": "source",
+      "parent": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui",
+      "depth": 3,
+      "filePath": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\ui\\tabs.tsx",
+      "complexity": 13,
+      "coupling": 2,
+      "linesOfCode": 82,
+      "exportCount": 1
+    },
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui/textarea.tsx",
+      "name": "textarea.tsx",
+      "type": "source",
+      "parent": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui",
+      "depth": 3,
+      "filePath": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\ui\\textarea.tsx",
+      "complexity": 7,
+      "coupling": 2,
+      "linesOfCode": 15,
+      "exportCount": 1
+    },
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui/tooltip.tsx",
+      "name": "tooltip.tsx",
+      "type": "source",
+      "parent": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui",
+      "depth": 3,
+      "filePath": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\ui\\tooltip.tsx",
+      "complexity": 10,
+      "coupling": 3,
+      "linesOfCode": 50,
+      "exportCount": 1
+    }
+  ],
+  "internalLinks": [
+    {
+      "source": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/auth/SignOutButton.tsx",
+      "target": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui/button.tsx"
+    },
+    {
+      "source": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/AgentChat.tsx",
+      "target": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/AssistantContent.tsx"
+    },
+    {
+      "source": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/BillingPanel.tsx",
+      "target": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui/badge.tsx"
+    },
+    {
+      "source": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/BillingPanel.tsx",
+      "target": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui/separator.tsx"
+    },
+    {
+      "source": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/BillingPanel.tsx",
+      "target": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/CheckoutButton.tsx"
+    },
+    {
+      "source": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/RunPanel.tsx",
+      "target": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/AssistantContent.tsx"
+    },
+    {
+      "source": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/Sidebar.tsx",
+      "target": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui/button.tsx"
+    },
+    {
+      "source": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/Sidebar.tsx",
+      "target": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/auth/SignOutButton.tsx"
+    },
+    {
+      "source": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/landing/StackStrip.tsx",
+      "target": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui/badge.tsx"
+    },
+    {
+      "source": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/landing/WaitlistForm.tsx",
+      "target": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui/button.tsx"
+    },
+    {
+      "source": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/landing/WaitlistForm.tsx",
+      "target": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui/input.tsx"
+    }
+  ],
+  "externalIngress": [
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/_components/AgentFleet.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui/badge.tsx",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\ui\\badge.tsx"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/_components/AgentFleet.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui/separator.tsx",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\ui\\separator.tsx"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/_components/DashboardHud.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/NewAgentForm.tsx",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\NewAgentForm.tsx"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/_components/DashboardHud.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui/button.tsx",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\ui\\button.tsx"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/_components/DashboardHud.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui/badge.tsx",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\ui\\badge.tsx"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/_components/NewAgentButton.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/NewAgentForm.tsx",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\NewAgentForm.tsx"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/_components/NewAgentButton.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui/button.tsx",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\ui\\button.tsx"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/_components/TerminalDrawer.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui/button.tsx",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\ui\\button.tsx"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/_components/TerminalDrawer.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui/badge.tsx",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\ui\\badge.tsx"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/agents/_components/AgentsPageContent.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/AssistantContent.tsx",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\AssistantContent.tsx"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/agents/_components/AgentsPageContent.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/AgentChat.tsx",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\AgentChat.tsx"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/agents/_components/AgentsPageContent.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/AgentConfigPanel.tsx",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\AgentConfigPanel.tsx"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/agents/_components/AgentsPageContent.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/ChatKanban.tsx",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\ChatKanban.tsx"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/agents/_components/AgentsPageContent.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/NewAgentForm.tsx",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\NewAgentForm.tsx"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/agents/_components/AgentsPageContent.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui/button.tsx",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\ui\\button.tsx"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/agents/[agentId]/_components/AgentDetailClient.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/AssistantContent.tsx",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\AssistantContent.tsx"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/agents/[agentId]/_components/AgentDetailClient.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/AgentChat.tsx",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\AgentChat.tsx"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/agents/[agentId]/_components/AgentDetailClient.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/AgentConfigPanel.tsx",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\AgentConfigPanel.tsx"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/agents/[agentId]/_components/AgentDetailClient.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/ChatKanban.tsx",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\ChatKanban.tsx"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/agents/[agentId]/page.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/AssistantContent.tsx",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\AssistantContent.tsx"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/agents/[agentId]/page.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/AgentChat.tsx",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\AgentChat.tsx"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/agents/[agentId]/page.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/AgentConfigPanel.tsx",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\AgentConfigPanel.tsx"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/agents/[agentId]/page.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/ChatKanban.tsx",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\ChatKanban.tsx"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/agents/new/page.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/NewAgentForm.tsx",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\NewAgentForm.tsx"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/agents/page.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/AssistantContent.tsx",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\AssistantContent.tsx"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/agents/page.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/AgentChat.tsx",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\AgentChat.tsx"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/agents/page.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/AgentConfigPanel.tsx",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\AgentConfigPanel.tsx"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/agents/page.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/ChatKanban.tsx",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\ChatKanban.tsx"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/agents/page.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/NewAgentForm.tsx",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\NewAgentForm.tsx"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/agents/page.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui/button.tsx",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\ui\\button.tsx"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/docs/cockpit/ArchitectureCockpit.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui/markdown-renderer.tsx",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\ui\\markdown-renderer.tsx"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/docs/cockpit/page.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui/markdown-renderer.tsx",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\ui\\markdown-renderer.tsx"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/knowledge/_components/KnowledgePageContent.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/UploadKnowledge.tsx",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\UploadKnowledge.tsx"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/knowledge/_components/KnowledgePageContent.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui/markdown-renderer.tsx",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\ui\\markdown-renderer.tsx"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/knowledge/components/DocumentUploader.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui/button.tsx",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\ui\\button.tsx"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/knowledge/page.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/UploadKnowledge.tsx",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\UploadKnowledge.tsx"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/knowledge/page.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui/markdown-renderer.tsx",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\ui\\markdown-renderer.tsx"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/layout.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui/button.tsx",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\ui\\button.tsx"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/layout.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/auth/SignOutButton.tsx",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\auth\\SignOutButton.tsx"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/layout.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/Sidebar.tsx",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\Sidebar.tsx"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/layout.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/PageTransition.tsx",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\PageTransition.tsx"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/page.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/NewAgentForm.tsx",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\NewAgentForm.tsx"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/page.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui/button.tsx",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\ui\\button.tsx"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/page.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui/badge.tsx",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\ui\\badge.tsx"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/page.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui/separator.tsx",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\ui\\separator.tsx"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/page.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui/skeleton.tsx",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\ui\\skeleton.tsx"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/settings/page.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/SettingsTabs.tsx",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\SettingsTabs.tsx"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/settings/page.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui/badge.tsx",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\ui\\badge.tsx"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/settings/page.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui/separator.tsx",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\ui\\separator.tsx"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/settings/page.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/CheckoutButton.tsx",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\CheckoutButton.tsx"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/settings/page.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/BillingPanel.tsx",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\BillingPanel.tsx"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/dashboard/usage/page.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui/skeleton.tsx",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\ui\\skeleton.tsx"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/layout.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui/tooltip.tsx",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\ui\\tooltip.tsx"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/login/page.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/auth/LoginForm.tsx",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\auth\\LoginForm.tsx"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/page.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/landing/LandingNav.tsx",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\landing\\LandingNav.tsx"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/page.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/landing/HeroSection.tsx",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\landing\\HeroSection.tsx"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/page.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/landing/ManifestSection.tsx",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\landing\\ManifestSection.tsx"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/page.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui/button.tsx",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\ui\\button.tsx"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/page.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui/input.tsx",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\ui\\input.tsx"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/page.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/landing/WaitlistForm.tsx",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\landing\\WaitlistForm.tsx"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/app/signup/page.tsx",
+      "sourceFolder": "app",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/auth/SignupForm.tsx",
+      "targetId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\auth\\SignupForm.tsx"
+    }
+  ],
+  "externalEgress": [
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/auth/LoginForm.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\auth\\LoginForm.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/supabase/admin.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/auth/LoginForm.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\auth\\LoginForm.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/supabase/queries.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/auth/LoginForm.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\auth\\LoginForm.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/actions/auth-actions.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/auth/LoginForm.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\auth\\LoginForm.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/utils.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/auth/SignOutButton.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\auth\\SignOutButton.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/utils.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/auth/SignOutButton.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\auth\\SignOutButton.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/supabase/admin.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/auth/SignOutButton.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\auth\\SignOutButton.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/supabase/queries.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/auth/SignOutButton.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\auth\\SignOutButton.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/actions/auth-actions.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/auth/SignupForm.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\auth\\SignupForm.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/supabase/admin.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/auth/SignupForm.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\auth\\SignupForm.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/supabase/queries.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/auth/SignupForm.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\auth\\SignupForm.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/actions/auth-actions.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/auth/SignupForm.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\auth\\SignupForm.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/utils.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/AgentChat.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\AgentChat.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/utils.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/AgentChat.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\AgentChat.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/ai/model-registry.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/AgentChat.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\AgentChat.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/ai/provider-factory.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/AgentChat.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\AgentChat.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/web-search.ts",
+      "targetFolder": "features"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/AgentChat.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\AgentChat.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/email-automate.ts",
+      "targetFolder": "features"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/AgentChat.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\AgentChat.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/supabase/admin.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/AgentChat.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\AgentChat.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/db-read-write.ts",
+      "targetFolder": "features"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/AgentChat.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\AgentChat.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/supabase/queries.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/AgentChat.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\AgentChat.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/ai/embeddings.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/AgentChat.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\AgentChat.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/actions/agent-crud-actions.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/AgentChat.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\AgentChat.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/knowledge-search.ts",
+      "targetFolder": "features"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/AgentChat.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\AgentChat.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/index.ts",
+      "targetFolder": "features"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/AgentChat.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\AgentChat.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/credits/constants.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/AgentChat.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\AgentChat.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/actions/credit-actions.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/AgentChat.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\AgentChat.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/actions/agent-actions.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/AgentChat.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\AgentChat.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/actions/conversation-actions.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/AgentChat.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\AgentChat.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/hooks/use-agent-stream.ts",
+      "targetFolder": "hooks"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/AgentChat.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\AgentChat.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/actions/document-actions.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/AgentChat.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\AgentChat.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/ai/tool-logs.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/AgentChat.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\AgentChat.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/ai/tool-registry.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/AgentConfigPanel.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\AgentConfigPanel.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/utils.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/AgentConfigPanel.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\AgentConfigPanel.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/supabase/admin.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/AgentConfigPanel.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\AgentConfigPanel.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/supabase/queries.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/AgentConfigPanel.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\AgentConfigPanel.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/ai/embeddings.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/AgentConfigPanel.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\AgentConfigPanel.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/actions/agent-crud-actions.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/AgentConfigPanel.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\AgentConfigPanel.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/ai/tool-registry.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/AssistantContent.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\AssistantContent.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/utils.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/BillingPanel.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\BillingPanel.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/supabase/admin.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/BillingPanel.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\BillingPanel.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/supabase/queries.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/BillingPanel.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\BillingPanel.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/utils.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/BillingPanel.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\BillingPanel.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/lemonsqueezy.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/BillingPanel.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\BillingPanel.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/billing/checkout.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/BillingPanel.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\BillingPanel.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/actions/billing-actions.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/BillingPanel.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\BillingPanel.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/billing/constants.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/ChatKanban.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\ChatKanban.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/supabase/admin.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/ChatKanban.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\ChatKanban.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/supabase/queries.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/ChatKanban.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\ChatKanban.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/actions/conversation-actions.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/ChatKanban.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\ChatKanban.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/utils.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/CheckoutButton.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\CheckoutButton.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/supabase/admin.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/CheckoutButton.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\CheckoutButton.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/supabase/queries.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/CheckoutButton.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\CheckoutButton.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/lemonsqueezy.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/CheckoutButton.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\CheckoutButton.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/billing/checkout.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/CheckoutButton.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\CheckoutButton.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/actions/billing-actions.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/ConversationHistory.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\ConversationHistory.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/supabase/admin.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/ConversationHistory.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\ConversationHistory.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/supabase/queries.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/ConversationHistory.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\ConversationHistory.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/actions/conversation-actions.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/ConversationHistory.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\ConversationHistory.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/utils.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/GlobalStats.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\GlobalStats.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/supabase/admin.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/GlobalStats.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\GlobalStats.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/supabase/queries.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/GlobalStats.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\GlobalStats.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/utils.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/NewAgentForm.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\NewAgentForm.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/utils.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/NewAgentForm.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\NewAgentForm.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/supabase/admin.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/NewAgentForm.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\NewAgentForm.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/supabase/queries.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/NewAgentForm.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\NewAgentForm.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/ai/embeddings.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/NewAgentForm.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\NewAgentForm.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/actions/agent-crud-actions.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/NewAgentForm.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\NewAgentForm.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/ai/tool-registry.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/NewAgentForm.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\NewAgentForm.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/ai/model-registry.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/RunPanel.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\RunPanel.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/utils.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/RunPanel.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\RunPanel.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/ai/model-registry.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/RunPanel.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\RunPanel.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/ai/provider-factory.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/RunPanel.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\RunPanel.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/web-search.ts",
+      "targetFolder": "features"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/RunPanel.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\RunPanel.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/email-automate.ts",
+      "targetFolder": "features"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/RunPanel.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\RunPanel.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/supabase/admin.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/RunPanel.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\RunPanel.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/db-read-write.ts",
+      "targetFolder": "features"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/RunPanel.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\RunPanel.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/supabase/queries.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/RunPanel.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\RunPanel.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/ai/embeddings.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/RunPanel.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\RunPanel.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/actions/agent-crud-actions.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/RunPanel.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\RunPanel.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/knowledge-search.ts",
+      "targetFolder": "features"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/RunPanel.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\RunPanel.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/features/tools/index.ts",
+      "targetFolder": "features"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/RunPanel.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\RunPanel.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/credits/constants.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/RunPanel.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\RunPanel.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/actions/credit-actions.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/RunPanel.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\RunPanel.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/actions/agent-actions.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/RunPanel.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\RunPanel.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/actions/conversation-actions.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/RunPanel.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\RunPanel.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/hooks/use-agent-stream.ts",
+      "targetFolder": "hooks"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/Sidebar.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\Sidebar.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/utils.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/Sidebar.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\Sidebar.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/supabase/admin.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/Sidebar.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\Sidebar.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/supabase/queries.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/Sidebar.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\Sidebar.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/actions/auth-actions.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/UploadKnowledge.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\UploadKnowledge.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/utils.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/UploadKnowledge.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\UploadKnowledge.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/supabase/admin.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/UploadKnowledge.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\UploadKnowledge.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/supabase/queries.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/UploadKnowledge.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\UploadKnowledge.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/ai/embeddings.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/dashboard/UploadKnowledge.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\dashboard\\UploadKnowledge.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/actions/document-actions.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/landing/StackStrip.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\landing\\StackStrip.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/utils.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/landing/WaitlistForm.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\landing\\WaitlistForm.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/utils.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui/badge.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\ui\\badge.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/utils.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui/button.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\ui\\button.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/utils.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui/card.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\ui\\card.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/utils.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui/glass-card.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\ui\\glass-card.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/utils.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui/input.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\ui\\input.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/utils.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui/label.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\ui\\label.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/utils.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui/markdown-renderer.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\ui\\markdown-renderer.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/utils.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui/progress.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\ui\\progress.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/utils.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui/select.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\ui\\select.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/utils.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui/separator.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\ui\\separator.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/utils.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui/skeleton.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\ui\\skeleton.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/utils.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui/table.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\ui\\table.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/utils.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui/tabs.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\ui\\tabs.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/utils.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui/textarea.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\ui\\textarea.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/utils.ts",
+      "targetFolder": "lib"
+    },
+    {
+      "sourceFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/components/ui/tooltip.tsx",
+      "sourceId": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\components\\ui\\tooltip.tsx",
+      "targetFile": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib/utils.ts",
+      "targetFolder": "lib"
+    }
+  ]
+}

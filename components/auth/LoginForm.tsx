@@ -1,16 +1,10 @@
 "use client";
 
-/**
- * components/auth/LoginForm.tsx
- *
- * Progressive Enhancement: the <form action={formAction}> pattern works
- * without JS. useActionState wires in the Server Action response once
- * hydrated. isPending from the React 19 3-tuple drives the submit state
- * directly — no useFormStatus wrapper needed.
- */
-
 import { useActionState } from "react";
+import Link from "next/link";
+import { Loader2, AlertCircle } from "lucide-react";
 import { loginAction, type ActionResult } from "@/lib/actions/auth-actions";
+import { cn } from "@/lib/utils";
 
 const initialState: ActionResult | null = null;
 
@@ -18,17 +12,24 @@ export function LoginForm() {
   const [state, formAction, isPending] = useActionState(loginAction, initialState);
 
   return (
-    <div className="w-full max-w-sm">
+    <div className="relative w-full max-w-md">
+      {/* Ambient accent glow behind card */}
+      <div className="pointer-events-none absolute -inset-x-8 -top-12 h-40 bg-primary/6 blur-3xl rounded-full" aria-hidden />
 
       {/* Wordmark */}
-      <div className="mb-8">
-        <p className="text-xs font-mono tracking-widest text-indigo-500 uppercase mb-1">
-          AgentZero
-        </p>
-        <h1 className="text-xl font-semibold text-zinc-100">
+      <div className="relative mb-8 anim-fade-up">
+        <div className="flex items-center gap-2.5 mb-4">
+          <div className="flex h-7 w-7 items-center justify-center rounded-sm bg-primary text-[10px] font-black font-mono text-black leading-none shadow-[0_0_24px_rgba(200,241,53,0.45)]">
+            AZ
+          </div>
+          <p className="font-mono text-[10px] font-black tracking-widest uppercase text-primary">
+            AgentZero
+          </p>
+        </div>
+        <h1 className="font-mono font-black text-2xl leading-tight mb-2 text-foreground">
           Sign in to your workspace
         </h1>
-        <p className="mt-1 text-sm text-zinc-500">
+        <p className="text-sm text-muted-foreground">
           Enter your credentials to continue.
         </p>
       </div>
@@ -36,65 +37,106 @@ export function LoginForm() {
       {/* Card */}
       <form
         action={formAction}
-        className="bg-zinc-900 border border-zinc-800 rounded-lg p-6 space-y-5"
+        className="relative space-y-4 p-6 rounded-md glass-2 anim-fade-up anim-fade-up-delay-1"
       >
         {/* Server Action error */}
         {state?.success === false && (
-          <div className="flex items-start gap-2 rounded border border-red-500/20 bg-red-500/5 px-3 py-2">
-            <span className="mt-px text-red-400 text-xs">⚠</span>
-            <p className="text-sm text-red-400">{state.error}</p>
+          <div
+            role="alert"
+            className="flex items-start gap-2 rounded-sm px-3 py-2 text-sm bg-destructive/8 border border-destructive/25 text-destructive"
+          >
+            <AlertCircle className="h-3.5 w-3.5 mt-0.5 shrink-0" />
+            <p>{state.error}</p>
           </div>
         )}
 
-        {/* Email */}
-        <div className="space-y-1.5">
-          <label
-            htmlFor="email"
-            className="block text-xs font-medium tracking-wide text-zinc-400 uppercase"
-          >
-            Email
-          </label>
-          <input
-            id="email"
-            name="email"
-            type="email"
-            autoComplete="email"
-            required
-            placeholder="you@company.com"
-            className="w-full rounded border border-zinc-700 bg-zinc-800 px-3 py-2 text-sm text-zinc-100 placeholder:text-zinc-600 outline-none transition focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 disabled:opacity-50"
-            disabled={isPending}
-          />
-        </div>
+        <FormField
+          id="email"
+          name="email"
+          type="email"
+          label="Email"
+          autoComplete="email"
+          required
+          placeholder="you@company.com"
+          disabled={isPending}
+        />
 
-        {/* Password */}
-        <div className="space-y-1.5">
-          <label
-            htmlFor="password"
-            className="block text-xs font-medium tracking-wide text-zinc-400 uppercase"
-          >
-            Password
-          </label>
-          <input
-            id="password"
-            name="password"
-            type="password"
-            autoComplete="current-password"
-            required
-            placeholder="••••••••"
-            className="w-full rounded border border-zinc-700 bg-zinc-800 px-3 py-2 text-sm text-zinc-100 placeholder:text-zinc-600 outline-none transition focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 disabled:opacity-50"
-            disabled={isPending}
-          />
-        </div>
+        <FormField
+          id="password"
+          name="password"
+          type="password"
+          label="Password"
+          autoComplete="current-password"
+          required
+          placeholder="••••••••"
+          disabled={isPending}
+        />
 
-        {/* Submit */}
         <button
           type="submit"
           disabled={isPending}
-          className="w-full rounded bg-indigo-600 px-4 py-2 text-sm font-medium text-white transition hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-zinc-900 disabled:cursor-not-allowed disabled:opacity-50"
+          className={cn(
+            "tap-target relative w-full rounded-sm px-4 py-2.5 mt-2",
+            "font-mono text-[11px] font-black uppercase tracking-widest",
+            "bg-primary text-primary-foreground hover:bg-primary/90",
+            "transition-[background-color,box-shadow,transform] duration-150 press",
+            "shadow-[0_0_24px_-8px_rgba(200,241,53,0.55)] hover:shadow-[0_0_32px_-6px_rgba(200,241,53,0.7)]",
+            "disabled:opacity-50 disabled:cursor-not-allowed disabled:shadow-none",
+            "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:ring-offset-2 focus-visible:ring-offset-background",
+          )}
         >
-          {isPending ? "Signing in…" : "Sign in"}
+          {isPending ? (
+            <span className="flex items-center justify-center gap-2">
+              <Loader2 className="h-3.5 w-3.5 animate-spin" />
+              Signing in…
+            </span>
+          ) : (
+            "Sign in"
+          )}
         </button>
+
+        <p className="text-center text-sm text-muted-foreground pt-1">
+          No account?{" "}
+          <Link
+            href="/signup"
+            className="text-primary hover:text-primary/90 transition-colors duration-150 font-medium"
+          >
+            Sign up
+          </Link>
+        </p>
       </form>
+    </div>
+  );
+}
+
+interface FormFieldProps extends React.InputHTMLAttributes<HTMLInputElement> {
+  id: string;
+  name: string;
+  label: string;
+}
+
+function FormField({ id, label, className, ...props }: FormFieldProps) {
+  return (
+    <div className="space-y-1.5">
+      <label
+        htmlFor={id}
+        className="block font-mono text-[10px] tracking-widest uppercase text-muted-foreground/70"
+      >
+        {label}
+      </label>
+      <input
+        id={id}
+        className={cn(
+          "tap-target w-full rounded-sm px-3 py-2.5 text-sm",
+          "bg-white/[0.025] border border-white/[0.08] text-foreground",
+          "placeholder:text-muted-foreground/40",
+          "transition-[border-color,box-shadow,background-color] duration-150 outline-none",
+          "focus:border-primary/50 focus:bg-white/[0.04] focus:shadow-[0_0_0_3px_rgba(200,241,53,0.12)]",
+          "disabled:opacity-50 disabled:cursor-not-allowed",
+          className,
+        )}
+        {...props}
+      />
     </div>
   );
 }

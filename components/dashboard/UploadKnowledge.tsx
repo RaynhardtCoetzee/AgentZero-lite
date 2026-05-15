@@ -11,7 +11,7 @@ type UploadState =
   | { status: "success"; documentId: string; chunkCount: number }
   | { status: "error"; message: string };
 
-const ACCEPTED_TYPES  = ["application/pdf", "text/plain"];
+const ACCEPTED_TYPES  = ["application/pdf", "text/plain", "text/markdown"];
 const MAX_SIZE_BYTES  = 50 * 1024 * 1024; // 50 MB
 
 export function UploadKnowledge({ agentId }: { agentId: string }) {
@@ -22,8 +22,12 @@ export function UploadKnowledge({ agentId }: { agentId: string }) {
 
   const validateAndSet = useCallback((candidate: File | null | undefined) => {
     if (!candidate) return;
-    if (!ACCEPTED_TYPES.includes(candidate.type)) {
-      setUploadState({ status: "error", message: `"${candidate.name}" is not supported. Use PDF or TXT.` });
+
+    const isAcceptedType = ACCEPTED_TYPES.includes(candidate.type) ||
+      candidate.name.endsWith('.md');
+
+    if (!isAcceptedType) {
+      setUploadState({ status: "error", message: `"${candidate.name}" is not supported. Use PDF, TXT, or MD.` });
       return;
     }
     if (candidate.size > MAX_SIZE_BYTES) {
@@ -79,40 +83,36 @@ export function UploadKnowledge({ agentId }: { agentId: string }) {
         onDragOver={!isUploading ? handleDragOver : undefined}
         onDragLeave={!isUploading ? handleDragLeave : undefined}
         className={cn(
-          "flex flex-col items-center justify-center gap-3 rounded-sm",
-          "border border-dashed px-6 py-12 text-center",
+          "flex items-center justify-center gap-3 rounded-sm",
+          "border border-dashed px-4 py-5 text-center",
           "cursor-pointer select-none outline-none transition-colors",
           "focus-visible:border-ring/50",
           dragActive
-            ? "border-[#c8f135]/50 bg-[#c8f135]/5"
+            ? "border-primary/50 bg-primary/5"
             : "border-border hover:border-border/70 hover:bg-muted/10",
           isUploading && "pointer-events-none opacity-50",
         )}
       >
-        <Upload className="h-7 w-7 text-muted-foreground/30" strokeWidth={1.5} />
-        <div className="space-y-1">
-          <p className="text-sm text-foreground/70">
-            Drop files to add to knowledge base
-          </p>
-          <p className="text-xs text-muted-foreground/40">
-            PDF and TXT supported · 50MB max per file
-          </p>
+        <Upload className="h-4 w-4 text-muted-foreground/30 shrink-0" strokeWidth={1.5} />
+        <div className="flex items-center gap-2">
+          <span className="font-mono text-xs text-foreground/70">
+            Drop PDF, TXT, or MD
+          </span>
+          <button
+            type="button"
+            tabIndex={-1}
+            className="rounded-sm border border-border px-3 py-1 font-mono text-xs text-muted-foreground/70 hover:border-border/70 hover:text-foreground transition-colors"
+            onClick={(e) => { e.stopPropagation(); if (!isUploading) inputRef.current?.click(); }}
+          >
+            browse
+          </button>
         </div>
-        <span className="text-xs text-muted-foreground/30">or</span>
-        <button
-          type="button"
-          tabIndex={-1}
-          className="rounded-sm border border-border px-4 py-1.5 font-mono text-xs text-muted-foreground/70 hover:border-border/70 hover:text-foreground transition-colors"
-          onClick={(e) => { e.stopPropagation(); if (!isUploading) inputRef.current?.click(); }}
-        >
-          Browse files
-        </button>
       </div>
 
       <input
         ref={inputRef}
         type="file"
-        accept=".pdf,.txt,application/pdf,text/plain"
+        accept=".pdf,.txt,.md,application/pdf,text/plain,text/markdown"
         className="hidden"
         onChange={handleInputChange}
         disabled={isUploading}
@@ -141,7 +141,7 @@ export function UploadKnowledge({ agentId }: { agentId: string }) {
             disabled={isUploading}
             className={cn(
               "flex shrink-0 items-center gap-1.5 rounded-sm px-3 py-1.5 font-mono text-xs font-medium transition-colors",
-              "bg-[#c8f135] text-black hover:bg-[#b8e025]",
+              "bg-primary text-primary-foreground hover:bg-primary/90",
               "disabled:opacity-50 disabled:cursor-not-allowed",
             )}
           >
@@ -153,8 +153,8 @@ export function UploadKnowledge({ agentId }: { agentId: string }) {
 
       {/* Success */}
       {uploadState.status === "success" && (
-        <div className="flex items-start gap-2.5 rounded-sm border border-emerald-500/20 bg-emerald-500/5 px-4 py-3">
-          <CheckCircle2 className="mt-px h-4 w-4 shrink-0 text-emerald-400" />
+        <div className="flex items-start gap-2.5 rounded-sm border border-primary/20 bg-primary/5 px-4 py-3">
+          <CheckCircle2 className="mt-px h-4 w-4 shrink-0 text-primary" />
           <div>
             <p className="text-sm text-foreground">Upload complete</p>
             <p className="mt-0.5 text-xs text-muted-foreground/60">

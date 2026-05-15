@@ -1,0 +1,127 @@
+{
+  "folders": [
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/app",
+      "name": "app",
+      "nodeCount": 79,
+      "linkCount": 271,
+      "manifestPath": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\manifests\\app.json"
+    },
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/components",
+      "name": "components",
+      "nodeCount": 43,
+      "linkCount": 184,
+      "manifestPath": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\manifests\\components.json"
+    },
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/features",
+      "name": "features",
+      "nodeCount": 7,
+      "linkCount": 61,
+      "manifestPath": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\manifests\\features.json"
+    },
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/hooks",
+      "name": "hooks",
+      "nodeCount": 4,
+      "linkCount": 21,
+      "manifestPath": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\manifests\\hooks.json"
+    },
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/lib",
+      "name": "lib",
+      "nodeCount": 33,
+      "linkCount": 328,
+      "manifestPath": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\manifests\\lib.json"
+    },
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/supabase",
+      "name": "supabase",
+      "nodeCount": 6,
+      "linkCount": 0,
+      "manifestPath": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\manifests\\supabase.json"
+    },
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/services",
+      "name": "services",
+      "nodeCount": 2,
+      "linkCount": 0,
+      "manifestPath": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\manifests\\services.json"
+    },
+    {
+      "id": "C:/Users/owner/OneDrive/Desktop/01agentzero/scripts",
+      "name": "scripts",
+      "nodeCount": 7,
+      "linkCount": 19,
+      "manifestPath": "C:\\Users\\owner\\OneDrive\\Desktop\\01agentzero\\manifests\\scripts.json"
+    }
+  ],
+  "folderArcs": [
+    {
+      "source": "app",
+      "target": "lib",
+      "weight": 162
+    },
+    {
+      "source": "app",
+      "target": "components",
+      "weight": 61
+    },
+    {
+      "source": "app",
+      "target": "features",
+      "weight": 20
+    },
+    {
+      "source": "app",
+      "target": "hooks",
+      "weight": 4
+    },
+    {
+      "source": "components",
+      "target": "lib",
+      "weight": 100
+    },
+    {
+      "source": "components",
+      "target": "features",
+      "weight": 10
+    },
+    {
+      "source": "components",
+      "target": "hooks",
+      "weight": 2
+    },
+    {
+      "source": "features",
+      "target": "lib",
+      "weight": 9
+    },
+    {
+      "source": "hooks",
+      "target": "lib",
+      "weight": 10
+    },
+    {
+      "source": "hooks",
+      "target": "features",
+      "weight": 5
+    },
+    {
+      "source": "lib",
+      "target": "features",
+      "weight": 5
+    },
+    {
+      "source": "scripts",
+      "target": "lib",
+      "weight": 10
+    },
+    {
+      "source": "scripts",
+      "target": "features",
+      "weight": 8
+    }
+  ]
+}
