@@ -7,7 +7,8 @@
  * All queries are scoped to the session user's orgId — no cross-org leakage.
  */
 
-import { auth } from "@/auth";
+import { auth, signOut } from "@/auth";
+import { redirect } from "next/navigation";
 import { adminClient } from "@/lib/supabase/admin";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
@@ -74,6 +75,14 @@ export async function createAgent(
     })
     .select("id")
     .single();
+
+  // Stale-session guard: PG 23503 = FK violation. The JWT's orgId points at an
+  // organisation row that no longer exists — sign the user out so the next
+  // login mints a fresh token against the current DB state.
+  if (error?.code === "23503") {
+    await signOut({ redirect: false });
+    redirect("/login?reason=stale_session");
+  }
 
   if (error || !data) {
     return { success: false, error: error?.message ?? "Failed to create agent" };
